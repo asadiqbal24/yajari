@@ -7,11 +7,11 @@
                 <div class="modal-body">
                     <p class="MBText1"><b>Welcome to Ya jari</b></p>
                     <div class="input-group mb-3">
-                        <input type="email" id="userEmail" class="FCinput2 form-control" placeholder="Email Address" aria-label="Email Address" aria-describedby="basic-addon1">
+                        <input type="email" id="userEmail"  class="FCinput2 form-control" placeholder="Email Address" aria-label="Email Address" aria-describedby="basic-addon1">
                         <span class="col-md-12 inputError" for="userEmail">Email field is required</span>
                     </div>
                     <div class="LRM1Button row">
-                        <a role="button" id="registerModal1Continuebtn">
+                        <a role="button"  data-bs-target="#LoginRegisterModal3" data-bs-toggle="modal" data-bs-dismiss="modal">
                             <p style="color: white;margin-top: 10px;cursor: pointer;">Continue</p>
                         </a>
                     </div>

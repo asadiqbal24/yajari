@@ -56,3 +56,4 @@
             </div>
 
     </section>
+    @include('sweetalert::alert')

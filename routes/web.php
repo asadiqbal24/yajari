@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserChatController;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\EmailVerficationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,7 +60,15 @@ Route::post('/userLogin', [AuthController::class, 'userLogin'])->name('userLogin
 Route::get('/userDashboard', [HomeController::class, 'userDashboard'])->name('userDashboard');
 
 Route::get('user-chat', [UserChatController::class, 'user_chat'])->name('user-chat');
+ 
 
+
+Route::get('email-verification/{token}', [EmailVerficationController::class, 'email_verification'])->name('email-verification');
+
+
+
+Route::post('email-opt-verfication', [EmailVerficationController::class, 'email_opt_verfication'])->name('email-opt-verfication');
+ 
 
 
 

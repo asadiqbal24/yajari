@@ -22,6 +22,16 @@
                             <input type="text" class="form-control" placeholder="6" aria-label="6">
                         </div>
                     </div>
+                    <div class="row LRM1Button" style="width:30%;">
+                       
+                            <a  role="button" style="text-decoration:none" data-bs-dismiss="modal" id="registerModal1Continuebtn">
+                                
+
+                                <p style="color: white;margin-top: 10px;cursor: pointer;">Continue</p>
+                            </a>
+                       
+                        
+                    </div>
                     <div class="Modal3footer modal-footer">
                         <div class="row">
                             <div class="col-8 col-sm-7 text-end">
