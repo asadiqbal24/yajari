@@ -9,6 +9,7 @@ use Spatie\Permission\Models\Role;
 use DB;
 use Hash;
 use Illuminate\Support\Arr;
+use Mail;
     
 class UserController extends Controller
 {
@@ -43,13 +44,14 @@ class UserController extends Controller
      */
     public function userRegister(Request $request)
     {
+          // dd($request);
+        $token = md5(date('Y-m-d').microtime()); 
 
-
-/*        $this->validate($request, [
+        $this->validate($request, [
             'registerPhoneNumber' => 'required',
             'registerEmail' => 'required|email|unique:users,email',
             'registerPassword' => 'required',
-        ]);*/
+        ]);
     
         $input = $request->all();
 /*        $input['password'] = Hash::make($input['password']);*/
@@ -66,8 +68,16 @@ class UserController extends Controller
         $user->sms_code   =$request->registerFirstName;
         $user->email   =$request->registerEmail;
         $user->password  = Hash::make($request->registerSendCodeViaSMS);
+        $user->remember_token=$token;
         $user->save();
         $user->assignRole(2);
+
+
+        $email = $request->registerEmail;
+        $data = ['email'=>$email,'token'=>$token];
+        Mail::send('emails.verify_mail',['data'=>$data],function($mail) use ($email){
+                    $mail->to($email,'New Registration')->from("dhca@fabulousinstruments.com")->subject("New Registration Email Verification");
+            });
 
         return redirect()->back()
                         ->with('success','Registration successfully');
