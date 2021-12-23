@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserChatController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\EmailVerficationController;
+use App\Http\Controllers\RequestController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -69,6 +70,14 @@ Route::get('email-verification/{token}', [EmailVerficationController::class, 'em
 
 Route::post('email-opt-verfication', [EmailVerficationController::class, 'email_opt_verfication'])->name('email-opt-verfication');
  
+
+
+Route::post('confirm-publish-save', [RequestController::class, 'confirm_publish_save'])->name('confirm-publish-save');
+
+
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('confirm-publish', [RequestController::class, 'confirm_publish'])->name('confirm-publish');
 
 
 

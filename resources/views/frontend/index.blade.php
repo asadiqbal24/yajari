@@ -675,5 +675,21 @@
 
 
 
+    <script type="text/javascript">
+    
+  $(document).ready(function () {
+
+     // Attach Button click event listener 
+    $("#continue").click(function(){
+
+         // show Modal
+         $('#LoginRegisterModal3').modal('show');
+    });
+})
+
+    </script>
+
+
+
    
 </body></html>

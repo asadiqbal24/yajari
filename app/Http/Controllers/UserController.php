@@ -54,23 +54,27 @@ class UserController extends Controller
         ]);
     
         $input = $request->all();
-/*        $input['password'] = Hash::make($input['password']);*/
-    
-        $user = new User();
-        $user->name = $request->registerFirstName?$request->registerFirstName.' '.$request->registerLastName:$request->registerCompanyName;
-        $user->first_name =$request->registerFirstName??$request->registerCompanyName; 
-        $user->last_name   =$request->registerLastName??NULL;
-        $user->company_name    =$request->registerCompanyName;
-        $user->address =$request->registerAddress;
-        $user->siret_number    =$request->registerSiretNumber;
-        $user->phone_number    =$request->registerPhoneNumber??NULL;
-        $user->country =$request->registerCountrySelect;
-        $user->sms_code   =$request->registerFirstName;
-        $user->email   =$request->registerEmail;
-        $user->password  = Hash::make($request->registerSendCodeViaSMS);
-        $user->remember_token=$token;
-        $user->save();
-        $user->assignRole(2);
+        $user_id=User::insertGetId([
+        'name'=>$request->registerFirstName?$request->registerFirstName.' '.$request->registerLastName:$request->registerCompanyName,
+        'first_name'=>$request->registerFirstName??$request->registerCompanyName,
+        'last_name'=>$request->registerLastName??NULL,
+        'company_name'=>$request->registerCompanyName,
+        'address'=>$request->registerAddress,
+        'password'=>bcrypt($request->registerSendCodeViaSMS),
+        'siret_number' => $request->registerSiretNumber,
+
+
+        'phone_number' => $request->registerPhoneNumber??NULL,
+        'country' => $request->registerCountrySelect,
+        'sms_code' => $request->registerFirstName,
+        'email' => $request->registerEmail,
+        'remember_token' => $token,
+        ]);
+       
+
+         $id=User::find($user_id);
+        $role=DB::table('roles')->where('name','User')->first();
+        $id->roles()->attach($role->id);
 
 
         $email = $request->registerEmail;

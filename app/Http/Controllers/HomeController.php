@@ -21,18 +21,5 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function userDashboard()
-    {
 
-    if(Auth::user()->hasRole('Admin')){
-        // dd('admin');
-       return view('admin.dashboard');
-    }
-
-      elseif(Auth::user()->hasRole('User')){
-       return redirect()->route('home');       
-    }
-
-
-    }
 }

@@ -118,7 +118,7 @@
             border-radius: 8px;
         }*/
 
-        .form-button1:hover,
+       /* .form-button1:hover,
         .form-button1:focus,
         .form-button1:active {
             background: linear-gradient(to right, #ff8dad, #ff2160);
@@ -128,7 +128,7 @@
             font-size: 16px;
             font-weight: bolder;
             border-radius: 8px;
-        }
+        }*/
 /*
         .form-button2 {
             background: white;
@@ -1002,7 +1002,7 @@
 
 
         .pl-11 {
-            padding-left: 60px !important;
+            padding-left: 115px !important;
         }
 
         @media(min-width:1920px) {
