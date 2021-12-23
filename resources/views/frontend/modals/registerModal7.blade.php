@@ -6,12 +6,12 @@
                 </div>
                 <div class="modal-body" style="padding-top: 1rem;">
                     <p class="MBText1"><b>Welcome to Ya jari</b></p>
-                    <form method="post" action="{{route('userLogin')}}" id="loginForm">
+                    <form method="post" action="{{route('userLogin')}}">
                     @csrf    
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-12">
                             <div class="form-group">
-                                <input type="text" required class="form-control" id="exampleInputPassword1" name="email" placeholder="Telephone Number or Email Address" style="height: 3rem;border-radius: 10px 10px 10px 10px;">
+                                <input type="email" required class="form-control" id="exampleInputPassword1" name="email" placeholder="Telephone Number or Email Address" style="height: 3rem;border-radius: 10px 10px 10px 10px;">
                             </div>
                         </div>
                     </div>
@@ -27,9 +27,11 @@
                     </div>
 
                     <div class="LRM1Button row">
-                        <a type="submit" onclick="$('#loginForm').submit();">
+                        <button type="submit" style="    background-color: #f31c5d;
+    border-radius: 10px;
+    border: none;">
                             <p style="color: white;margin-top: 10px;">Continue</p>
-                        </a>
+                        </button>
                     </div>
                 </form>
                 </div>
