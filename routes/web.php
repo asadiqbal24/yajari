@@ -19,10 +19,12 @@ use App\Http\Controllers\RequestController;
 */
 
 Route::get('/', function () {
+  
     return view('frontend.index');
 });
 
 Route::get('home', function () {
+     
     return view('frontend.index');
 })->name('home');
 
@@ -53,7 +55,7 @@ Route::get('professionalProfile', function () {
 
 
 
-Auth::routes();
+// Auth::routes();
 
 
 Route::post('/userRegister', [UserController::class, 'userRegister'])->name('userRegister');  
@@ -78,6 +80,16 @@ Route::post('confirm-publish-save', [RequestController::class, 'confirm_publish_
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('confirm-publish', [RequestController::class, 'confirm_publish'])->name('confirm-publish');
+
+
+
+Route::get('validating-request', [RequestController::class, 'validating_request'])->name('validating-request');
+
+
+Route::get('view-request', [RequestController::class, 'view_request'])->name('view-request');
+
+
+
 
 
 

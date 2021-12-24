@@ -1,12 +1,16 @@
 @include('frontend.layout.head')
+@section('professionalprofile','active')
 <link rel="stylesheet" href="{{asset('theme/css/ProfessionalProfileStyle.css')}}">
 <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
     <style type="text/css">
         @media all and (min-width: 1280px) {
             .joined {
                 position: relative;
-                left: 168px;
+                left: 315px;
             }
+            .card-img-top {
+    width: 10rem;
+}
         }
 
         @media all and (min-width: 1440px) {
@@ -501,7 +505,7 @@
 
                             <div class="col" style="width: 10rem;">
                                 <div class="upload-Picture">
-                                    <img src="{{asset('theme/icons/ic_add_a_photo_24px.png')}}" class="card-img-top iconsettingprofile">
+                                    <img src="{{asset('theme/icons/ic_add_a_photo_24px.png')}}" class=" iconsettingprofile">
                                 </div>
 
 
