@@ -58,6 +58,7 @@ body {
 .showcase-text1 {
     font-size: 30px;
     font-weight: 900;
+    padding-top: 0px;
 }
 
 .VRimg {
@@ -137,7 +138,56 @@ body {
 
 
 
-@media (max-width: 768px) {
+
+
+@media (max-width: 800px) {
+    .requestnav {
+        padding-left: 0px;
+        text-decoration: none;
+    }
+
+    .servicesnav {
+        padding-left: 0px;
+        padding-right: 20px;
+        text-decoration: none;
+    }
+
+    .publishnavbar {
+        position: relative;
+        left: -30px;
+        text-align: center;
+    }
+
+    .navpublish {
+        padding-left: 20px;
+        width: 200px;
+        background: linear-gradient(to right, #ffacbf, #fa4d75);
+        color: white;
+        border-radius: 20px;
+        align-items: center;
+        padding-top: 10px;
+    }
+
+    .showcase-text1 {
+        font-size: 20px;
+        font-weight: 900;
+    }
+
+    .SCimg {
+        width: 1.7rem;
+        margin-top: 3px;
+    }
+
+    .VRcontainer {
+        box-shadow: 1px 1px 100px 1px #fde1df;
+        border-radius: 20px;
+        padding: 2rem;
+
+    }
+}
+
+
+    @media (max-width: 768px) {
     .CRButton1 a {
         font-size: 12px;
     }
@@ -231,51 +281,6 @@ body {
 
 }
 
-
-@media (max-width: 800px) {
-    .requestnav {
-        padding-left: 0px;
-        text-decoration: none;
-    }
-
-    .servicesnav {
-        padding-left: 0px;
-        padding-right: 20px;
-        text-decoration: none;
-    }
-
-    .publishnavbar {
-        position: relative;
-        left: -30px;
-        text-align: center;
-    }
-
-    .navpublish {
-        padding-left: 20px;
-        width: 200px;
-        background: linear-gradient(to right, #ffacbf, #fa4d75);
-        color: white;
-        border-radius: 20px;
-        align-items: center;
-        padding-top: 10px;
-    }
-
-    .showcase-text1 {
-        font-size: 20px;
-        font-weight: 900;
-    }
-
-    .SCimg {
-        width: 1.7rem;
-        margin-top: 3px;
-    }
-
-    .VRcontainer {
-        box-shadow: 1px 1px 100px 1px #fde1df;
-        border-radius: 20px;
-        padding: 2rem;
-
-    }
 
     @media (min-width: 1200px) {
         #nav-login {
@@ -524,6 +529,11 @@ body {
             text-decoration: none;
         }
 
+        .showcase-text1 {
+    font-size: 18px;
+    padding-top: 20px;
+}
+
         .servicesnav {
             padding-left: 0px;
             padding-right: 0px;
@@ -696,3 +706,19 @@ body {
         }
 
     }
+
+        @media only screen and (max-width: 320px) {
+
+ .showcase-text1 {
+    font-size: 17px;
+    padding-top: 20px;
+}
+
+
+}
+
+
+
+
+
+   

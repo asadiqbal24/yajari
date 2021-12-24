@@ -394,7 +394,7 @@
 @include('frontend.layout.navbar')
             
             <!--Show Case-->
-            <section class="pt-5 text-center">
+            <section class="text-center" style="padding-top: 1.5rem!important;">
                 <div class="row" style="margin:0px">
                     
                     <div class="col-lg-12">

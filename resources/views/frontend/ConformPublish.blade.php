@@ -1,5 +1,5 @@
 @include('frontend.layout.head')
-@section('sConformPublish','active')
+@section('ConformPublish','active')
 
 <link rel="stylesheet" href="{{asset('theme/css/ConformPublishStyle.css')}}">
 
@@ -183,7 +183,7 @@
         <div class="container-fluid">
             <div class="row" style="margin:0px">
                 <div class="col-lg-12 col-sm-12 col-12">
-                    <div  style="background-image: url(theme/pictures/Group\ 12.png);height: 200px;width: 100%;border-radius: 0px;">
+                    <div  class="background-image" style="background-image: url(theme/pictures/Group\ 12.png);width: 100%;border-radius: 20px;">
                         <p class="showcase-text1" style="color:white">Publish your requests</p>
                     </div>
                 </div>
@@ -239,7 +239,7 @@
 
                                 <div class="row">
                                     <div class="col d-flex star">
-                                        <img class="responses-star1" src="icons/Group 2411.png">
+                                        <img class="responses-star1" src="{{asset('theme/icons/Group 2411.png')}}">
 
                                     </div>
                                 </div>
@@ -268,9 +268,15 @@
                             <div class="row mb-5" id="map"></div>
                         </div> -->
                 <div class=" col-lg-4 col-md-12 maptop320">
-                    <div class="mapDIV">
+                    <div class="col-12">
+                        
+
+                <div class="mapDIV">
                         <div id='map'></div>
                     </div>
+
+                    </div>
+                    
                 </div>
                 <div class="row pt-5 buttontop">
                     <div class="col-6 col pb-3">
@@ -282,7 +288,7 @@
                     </div>
                     <div class="col-6 col">
                         <div class="CRButton2 publishtop">
-                            <a href="validatingRequest1.html">
+                            <a href="{{route('validating-request')}}">
                                 <p>Publish</p>
                             </a>
                         </div>
@@ -299,7 +305,7 @@
                     <div class="modal-header row">
                         <div class="col-4 col-sm-4">
                             <button type="button" data-bs-dismiss="modal" aria-label="Close" style="background-color: white;border: none;">
-                                <img class="model-img1" src="icons/ic_keyboard_arrow_right_24Blackpx.png">
+                                <img class="model-img1" src="{{asset('theme/icons/ic_keyboard_arrow_right_24Blackpx.png')}}">
                             </button>
                         </div>
                         <div class="col-7 col-sm-7">
@@ -332,7 +338,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <img class="MFImg" src="icons/yajari-removebg-preview.png">
+                            <img class="MFImg" src="{{asset('theme/icons/yajari-removebg-preview.png')}}">
                         </div>
                     </div>
                 </div>
@@ -351,6 +357,7 @@
             style: 'mapbox://styles/mapbox/streets-v11',
             center: [74.515225, 32.467766],
             zoom: 15,
+            attributionControl: false
         });
         const marker1 = new mapboxgl.Marker()
             .setLngLat([74.515225, 32.467766])

@@ -3,6 +3,10 @@ body {
     padding-top: 5rem;
 }
 
+
+.background-image{
+    height: 190px;
+}
 .requestnav {
     padding-left: 25px;
     text-decoration: none;

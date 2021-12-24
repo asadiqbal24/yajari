@@ -1,5 +1,6 @@
 @include('frontend.layout.head')
-@section('requests','active')
+@section('viewrequests','active')
+<link rel="stylesheet" href="{{asset('theme/css/ViewRequestStyle.css')}}">
     <style type="text/css">
         @media all and (min-width: 1280px) {
             .CRButton3 {
@@ -158,8 +159,8 @@
     <section class="pt-3 text-center">
         <div class="row" style="margin:0px">
 
-            <div class="col-lg-12 mainpicture">
-                <div class="background-image text-center backgroundimage">
+            <div class="col-lg-12">
+                <div class="background-image text-center backgroundimage" style="background-image: url(theme/pictures/Group\ 12.png);">
                     <p class="showcase-text1" style="color:white">Request Details</p>
 
 
@@ -183,7 +184,7 @@
                         </div>
                         <div class="row">
                             <div class="col-3 col-sm-4 col-md-4 col-lg-4 col-xxl-3">
-                                <img class="requestFaceImg1" class="requestFaceImg1" src="icons/asset-1.png">
+                                <img class="requestFaceImg1" class="requestFaceImg1" src="{{asset('theme/icons/asset-1.png')}}">
                             </div>
                             <div class="col-9 col-sm-8 col-md-8 col-lg-8 col-xxl-9 text-start ConformRequestCol2">
                                 <div class="d-flex" style="justify-content: space-between;">
@@ -206,7 +207,7 @@
                                 <div class="row">
                                     <div class="col d-flex" style="justify-content: space-between;">
                                         <div class="d-flex lebardolocation">
-                                            <img src="icons/ic_place_-2.png" style="width: 12px;height: 17px;">
+                                            <img src="{{asset('theme/icons/ic_place_-2.png')}}" style="width: 12px;height: 17px;">
                                             <p class="Position-t1 text-start">Le Bardo Location</p>
                                         </div>
                                         <div>
@@ -240,9 +241,9 @@
                         <div class="row photogallery">
                             <p class="CRPhotosT">Photos:</p>
                             <div class="col">
-                                <img class="CRPhotosImg" src="pictures/boris-debusscher-1.png">
-                                <img class="CRPhotosImg" src="pictures/cdc-T-1.png">
-                                <img class="CRPhotosImg" src="pictures/cdc-wz-1.png">
+                                <img class="CRPhotosImg" src="{{asset('theme/pictures/boris-debusscher-1.png')}}">
+                                <img class="CRPhotosImg" src="{{asset('theme/pictures/cdc-T-1.png')}}">
+                                <img class="CRPhotosImg" src="{{asset('theme/pictures/cdc-wz-1.png')}}">
                             </div>
                         </div>
 
@@ -256,7 +257,7 @@
                 <div class="row" style="margin:0px;padding-bottom: 30px;">
                     <div class="col-sm-3 col-lg-12 col-md-6 ">
                         <div class="CRButton1">
-                            <a href="RequestsPage.html">
+                            <a href="{{route('requests')}}">
                                 <p class="ptop">Go Back</p>
                             </a>
                         </div>
@@ -364,7 +365,7 @@
     
     @include('frontend.layout.footer')
     @include('frontend.layout.scripts')
-
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
     <script>
         mapboxgl.accessToken = 'pk.eyJ1IjoiYW1tYXIxMjMxMjMiLCJhIjoiY2tydzJsMm9jMGNpajJucnh4M2pmaTVsZCJ9.ZxNGpJR7Qw9t3ONgdZmbQA';
         var map = new mapboxgl.Map({

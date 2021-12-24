@@ -64,4 +64,15 @@ class RequestController extends Controller
     {
         return view('frontend.ConformPublish');
     }
+
+    public function validating_request()
+    {
+     
+        return view('frontend.validatingRequest1');
+    }
+
+    public function view_request()
+    {
+      return view('frontend.ViewRequest');  
+    }
 }

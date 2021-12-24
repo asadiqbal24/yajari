@@ -432,7 +432,7 @@ body {
         margin-top: 0.3rem;
         position: relative;
         top: 2px;
-        left: -145px;
+        left: 0px;
     }
 
     body {
@@ -565,24 +565,24 @@ body {
         border-radius: 5px;
         font-size: 12px;
         position: relative;
-        left: 232px;
+        left: 0px;
     }
 
     .addressofjohn {
         position: relative;
-        left: -337px;
+        left: -178px;
         top: 25px;
     }
 
     .joined {
-        position: relative;
-        left: -366px;
-        top: 20px;
+            position: relative;
+    left: 77px;
+    top: -15px;
     }
 
     .iconfb {
         position: relative;
-        left: -449px;
+        left: 0px;
         top: 45px;
     }
 
@@ -974,6 +974,44 @@ body {
 
 }
 
+@media(max-width:768px) {
+    .pding-topp {
+        padding-top: 2.5rem !important;
+    }
+
+    .reviewparagraph {
+        padding-left: 0rem !important;
+    }
+
+    .socialicon {
+        transform: translateX(-40%) !important;
+    }
+
+    .followus {
+        position: relative;
+        left: 10px !important;
+        top: -50px;
+    }
+
+    .card-img-top{
+            width: 7rem;
+    }
+
+    .previews{
+         background: linear-gradient(to right, #77EDF9, #0FB5E8);
+    text-decoration: none;
+    text-align: center;
+    width: 12rem;
+    padding: 0.5rem 0;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: auto;
+    padding-right: 0;
+    height: 2.5rem;
+    }
+}
+
 @media only screen and (max-width: 425px) {
 
     .aboutmetop {
@@ -983,6 +1021,10 @@ body {
 
     }
 
+
+.socialicon {
+    transform: translateX(-30%) !important;
+}
     .footerprofessionaltop {
         position: relative;
         top: -200px;
@@ -1440,6 +1482,18 @@ body {
         width: 9rem;
     }
 
+    .publishnavbar{
+        position: relative;
+    left: -15px;
+    text-align: center;
+    width: 40%;
+    }
+    .background-image{
+        height: 150px;
+    }
+
+
+
 
 }
 
@@ -1796,25 +1850,7 @@ body {
     }
 }
 
-@media(max-width:768px) {
-    .pding-topp {
-        padding-top: 2.5rem !important;
-    }
 
-    .reviewparagraph {
-        padding-left: 0rem !important;
-    }
-
-    .socialicon {
-        transform: translateX(-40%) !important;
-    }
-
-    .followus {
-        position: relative;
-        left: 10px !important;
-        top: -50px;
-    }
-}
 
 .reviewparagraph {
     padding-left: 14rem;
@@ -1829,3 +1865,5 @@ body {
 .pding-topp {
     padding-top: 1rem;
 }
+
+

@@ -49,7 +49,7 @@ body {
 
 .background-image {
     width: 100%;
-    height: 200px;
+    height: 175px;
     border-radius: 2%;
     background-image: url(pictures/Group\ 12.png);
     background-position: center;
@@ -676,7 +676,7 @@ body {
 
     .background-image {
         width: 100%;
-        top: 13px;
+        top: 30px;
         border-radius: 5%;
         background-position: center;
         background-size: cover;
@@ -1001,6 +1001,7 @@ body {
         background-size: cover;
         position: relative;
         overflow: hidden;
+        top: 15px;
     }
 
 
@@ -1382,6 +1383,7 @@ body {
         background-size: cover;
         position: relative;
         overflow: hidden;
+        left: 0px;
     }
 
     .mapDIV {

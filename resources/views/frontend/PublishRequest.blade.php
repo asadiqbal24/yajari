@@ -1,5 +1,10 @@
 @include('frontend.layout.head')
-@section('requests','active')
+@section('publishrequests','active')
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="{{asset('theme/css/PublishRequestStyle.css')}}">
+
 <style type="text/css">
 .form-button2 {
 background: white;
@@ -161,7 +166,7 @@ width: 25%;
 <link rel="stylesheet" href="{{asset('theme/css/PublishRequestStyle.css')}}">
 <body style="zoom:90%">
     <!--Nav Bar-->
-    @include('frontend.layout.navbar')
+    @include('frontend.layout.navbar2')
     <!--Show Case-->
     <section class="pt-3 text-center">
         <div class="row" style="margin:0px">
@@ -305,6 +310,13 @@ width: 25%;
     
     @include('frontend.layout.footer')
     @include('frontend.layout.scripts')
+    <script type="text/javascript">
+        var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+  return new bootstrap.Dropdown(dropdownToggleEl)
+})
+    </script>
+
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
