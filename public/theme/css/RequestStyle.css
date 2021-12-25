@@ -1498,9 +1498,9 @@ textarea::placeholder {
         text-decoration: none;
     }
 
-    .Contact-b1 {
+    /*.Contact-b1 {
         display: none;
-    }
+    }*/
 
     .mobile {
         background: linear-gradient(to right, #ff7a97, #ff3161);
@@ -1759,6 +1759,7 @@ textarea::placeholder {
         position: relative;
         left: -40px;
         text-align: center;
+        width: 50%;
     }
 
     .subcategoryul {
@@ -1962,6 +1963,7 @@ textarea::placeholder {
         height: 130px;
         position: initial;
         width: 100%;
+        margin-top: 20px;
     }
 
     .reportcard {

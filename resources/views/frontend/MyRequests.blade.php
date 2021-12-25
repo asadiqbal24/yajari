@@ -1,274 +1,201 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="RecentRequestStyle.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <title>ya jari</title>
+    @include('frontend.layout.head')
+    @section('my-request','active')
+    <link rel="stylesheet" href="{{asset('theme/css/RecentRequestStyle.css')}}">
     <style type="text/css">
-        @media all and (min-width: 1440px) {
-            .socialicon {
-                transform: translateX(80%);
-            }
 
-            .followus {
-                position: relative;
-                left: 330px;
-                top: -50px;
-            }
-
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-
-        @media all and (min-width: 1590px) {
-            .navalign {
-                padding-left: 173px;
-                padding-top: 10px;
-                color: #ff6e9a;
-                font-weight: bold;
-                display: inline-flex;
-                padding-right: .5rem;
-            }
-
-            .navalign2 {
-                padding-left: 570px;
-                padding-top: 10px;
-                color: #ff6e9a;
-                font-weight: bold;
-                display: inline-flex;
-            }
-
-            .ReportContactFlex {
-                justify-content: right;
-                position: relative;
-                left: 76px;
-            }
-
-            .arrow {
-                position: relative;
-                top: 1px
-            }
-
-            .distance {
-                position: relative;
-                top: 1px;
-            }
-
-            .smallbutton {
-                position: relative;
-                top: 40px;
-                left: -190px;
-            }
-
-            .lastimgtext {
-                position: relative;
-                top: -25px;
-                left: 73px;
-            }
-
-            .categorytop {
-                position: relative;
-                top: 0px;
-            }
-
-
-            .ahre {
-                padding-left: 2rem;
-            }
-
-            .loadmore {
-                text-decoration: none;
-                color: #08B1E7;
-                font-size: 16px;
-                font-weight: 600;
-                position: relative;
-                left: 20px;
-                top: 16px;
-            }
-
-            .joined {
-                position: relative;
-                left: 665px;
-            }
-
-            .reviewparagraph {
-                justify-content: center;
-                position: relative;
-                left: 311px;
-            }
-
-            .upload-Picture {
-                width: 19rem;
-                height: 19.4rem;
-                margin-left: 0.3rem;
-                margin-top: 0.3rem;
-                border-style: dashed;
-                border-color: rgb(175, 175, 175);
-            }
-
-            .ReportCol {
-
-                margin-right: 18rem;
-            }
-
-            .nav-publish {
-
-                padding-left: 20px;
-                background: linear-gradient(to right, #ffacbf, #fa4d75);
-
-                color: white;
-                border-radius: 20px;
-                align-items: center;
-                padding-top: 10px;
-            }
-
-            .searchbardown {
-                position: relative;
-                top: -10px;
-                left: -160px
-            }
-
-            .col-xxl-7 {
-                flex: 0 0 auto;
-                width: 100%;
-
-            }
-
-            .searchbar {
-                position: relative;
-                width: 160%;
-                left: -160px;
-            }
-
-            .lastpic {
-                position: relative;
-                top: 7px;
-                left: 35px;
-            }
-
-            .CRButton2 {
-                text-align: center;
-                width: 13rem;
-                height: 3.5rem;
-                background: linear-gradient(to right, #ff6d99, #fd0d55);
-                border-radius: 6px;
-                position: relative;
-                left: -100px;
-            }
-
-            .response2 {
-                position: relative;
-                top: 2px;
-            }
-
-            .socialicon {
-                transform: translateX(80%);
-            }
-
-            .followus {
-                position: relative;
-                left: 328px;
-                top: -50px;
-            }
-
-        }
-
-        @media all and (min-width: 1920px) {
-            .navalign {
-                padding-left: 173px;
-                padding-top: 10px;
-                color: #ff6e9a;
-                font-weight: bold;
-                display: inline-flex;
-                padding-right: .5rem;
-            }
-
-            .navalign2 {
-                padding-left: 921px;
-                padding-top: 10px;
-                color: #ff6e9a;
-                font-weight: bold;
-                display: inline-flex;
-            }
-
-            .pagnationtop {
-                position: relative;
-                top: -20px;
-            }
-
-            .background-image {
-                border-radius: 25px;
-                width: 100%;
-                height: 165px;
-                position: relative;
-                background-position: center;
-                background-size: cover;
-                overflow: hidden;
-            }
-        }
-
-        .showcase-text1 {
-            font-size: 26px;
-            font-weight: 900;
-            padding-top: 2rem
-        }
-
+    @media all and (min-width: 1440px) {
+    .socialicon {
+    transform: translateX(80%);
+    }
+    .followus {
+    position: relative;
+    left: 330px;
+    top: -50px;
+    }
+    }
+    .form-group {
+    margin-bottom: 15px;
+    }
+    @media all and (min-width: 1590px) {
+    .navalign {
+    padding-left: 173px;
+    padding-top: 10px;
+    color: #ff6e9a;
+    font-weight: bold;
+    display: inline-flex;
+    padding-right: .5rem;
+    }
+    .navalign2 {
+    padding-left: 570px;
+    padding-top: 10px;
+    color: #ff6e9a;
+    font-weight: bold;
+    display: inline-flex;
+    }
+    .ReportContactFlex {
+    justify-content: right;
+    position: relative;
+    left: 76px;
+    }
+    .arrow {
+    position: relative;
+    top: 1px
+    }
+    .distance {
+    position: relative;
+    top: 1px;
+    }
+    .smallbutton {
+    position: relative;
+    top: 40px;
+    left: -190px;
+    }
+    .lastimgtext {
+    position: relative;
+    top: -25px;
+    left: 73px;
+    }
+    .categorytop {
+    position: relative;
+    top: 0px;
+    }
+    .ahre {
+    padding-left: 2rem;
+    }
+    .loadmore {
+    text-decoration: none;
+    color: #08B1E7;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    left: 20px;
+    top: 16px;
+    }
+    .joined {
+    position: relative;
+    left: 665px;
+    }
+    .reviewparagraph {
+    justify-content: center;
+    position: relative;
+    left: 311px;
+    }
+    .upload-Picture {
+    width: 19rem;
+    height: 19.4rem;
+    margin-left: 0.3rem;
+    margin-top: 0.3rem;
+    border-style: dashed;
+    border-color: rgb(175, 175, 175);
+    }
+    .ReportCol {
+    margin-right: 18rem;
+    }
+    .nav-publish {
+    padding-left: 20px;
+    background: linear-gradient(to right, #ffacbf, #fa4d75);
+    color: white;
+    border-radius: 20px;
+    align-items: center;
+    padding-top: 10px;
+    }
+    .searchbardown {
+    position: relative;
+    top: -10px;
+    left: -160px
+    }
+    .col-xxl-7 {
+    flex: 0 0 auto;
+    width: 100%;
+    }
+    .searchbar {
+    position: relative;
+    width: 160%;
+    left: -160px;
+    }
+    .lastpic {
+    position: relative;
+    top: 7px;
+    left: 35px;
+    }
+    .CRButton2 {
+    text-align: center;
+    width: 13rem;
+    height: 3.5rem;
+    background: linear-gradient(to right, #ff6d99, #fd0d55);
+    border-radius: 6px;
+    position: relative;
+    left: -100px;
+    }
+    .response2 {
+    position: relative;
+    top: 2px;
+    }
+    .socialicon {
+    transform: translateX(80%);
+    }
+    .followus {
+    position: relative;
+    left: 328px;
+    top: -50px;
+    }
+    }
+    @media all and (min-width: 1920px) {
+    .navalign {
+    padding-left: 173px;
+    padding-top: 10px;
+    color: #ff6e9a;
+    font-weight: bold;
+    display: inline-flex;
+    padding-right: .5rem;
+    }
+    .navalign2 {
+    padding-left: 921px;
+    padding-top: 10px;
+    color: #ff6e9a;
+    font-weight: bold;
+    display: inline-flex;
+    }
+    .pagnationtop {
+    position: relative;
+    top: -20px;
+    }
+    .background-image {
+    border-radius: 25px;
+    width: 100%;
+    height: 165px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    }
+    }
+    .showcase-text1 {
+    font-size: 26px;
+    font-weight: 900;
+    padding-top: 2rem
+    }
     </style>
-</head>
-
-<body style="zoom:90%">
+    </head>
+    <body style="zoom:90%">
+    @include('frontend.layout.navbar')
     <!--Nav Bar-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="    background-color: white;
-                box-shadow: 0px 2px 5px #acacac;">
-        <div class="container-fluid">
-            <a href="#" class="navbar-brand">
-                <img src="icons/yajari-removebg-preview-1.png" class="yajari-removebg-preview-1" alt="Yajiri">
-            </a>
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse" style="margin-left:6%">
-                <div class="navbar-nav">
-                    <a style=" padding-top: 10px;color: #3B3B3B;font-weight: bold;" href="HomePage.html" class="nav-item nav-link active">Home</a>
-                    <a style=" padding-top: 10px;color: #3B3B3B;font-weight: bold;" href="RequestsPage.html" class="nav-item  requestnav">Requests</a>
-                    <a style=" padding-top: 10px;color: #3B3B3B;font-weight: bold" href="ServiceProviders.html" class="nav-item servicesnav">Service Providers</a>
-                    <a style=" padding-top: 10px;color: white;font-weight: bold;" href="PublishRequest.html" class="nav-item nav-link navpublish publishnavbar">Publish a Request</a>
-                </div>
-                <div class="navbar-nav ms-auto">
-                    <a data-bs-toggle="modal" role="button" href="#LoginRegisterModal8" style=" padding-top: 10px;color: #3B3B3B;font-weight: bold;padding-right: 20px;" class="nav-item nav-link">Sign in</a>
-                    <a data-bs-toggle="modal" href="#LoginRegisterModal1" role="button" id="Register-MView" style=" padding-top: 10px;color: #3B3B3B;font-weight: bold;    padding-right: 40px;" class="nav-item nav-link">Register</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+
     <section class="pt-3 text-center">
         <div class="row" style="margin:0px">
             <div class="col-lg-12 mainpicture">
-                <div class="background-image text-center background-image">
+                <div class=" background-image text-center ">
                     <p class="showcase-text1" style="color:white">My Requests</p>
                     <p class="showcase-text2" style="font-size: 22; font-weight:500;color: white;">Publish the request and resolve your
-                        issue</p>
+                    issue</p>
                     <button class="btn btn-small publishbutton" type="button" style="background-color:white; color: #FA4673; height: 40px;border-color: #FA4673; border-width: 2px; border-radius: 10px;  ">
-                        <p style="font-size: 18; font-weight: bolder;">Publish Request</p>
+                    <p style="font-size: 18; font-weight: bolder;">Publish Request</p>
                     </button>
                 </div>
             </div>
         </div>
     </section>
     <!--Show Case-->
-
     <!--Recent Requests-->
     <section class="py-5 myrequesttop">
         <div class="container" style="max-width: 70rem;">
@@ -284,7 +211,7 @@
                             </div>
                             <div class="text-end d-flex">
                                 <button type="button" class="QuotationButton">
-                                    <p class="responses-tQ1">$5</p>
+                                <p class="responses-tQ1">$5</p>
                                 </button>
                             </div>
                         </div>
@@ -292,11 +219,11 @@
                             <div class="col-sm-4 col-12 picturebottom">
                                 <div class="d-flex" style="justify-content: left;">
                                     <div class="" style="position: relative;">
-                                        <a href="ProfessionalProfile.html"> <img class="requestFaceImg1" src="icons/asset-1.png"></a>
+                                        <a href="{{route('professionalProfile')}}"> <img class="requestFaceImg1" src="{{asset('theme/icons/asset-1.png')}}"></a>
                                     </div>
                                     <div class="text-start CardNameStar">
                                         <div class="row">
-                                            <a href="ProfessionalProfile.html" style="text-decoration:none">
+                                            <a href="{{route('professionalProfile')}}" style="text-decoration:none">
                                                 <p class="Responses-Name1 text-start" style="margin-bottom: 0.5rem;color: black;">
                                                     <b>Jonny David</b>
                                                 </p>
@@ -304,8 +231,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col d-flex">
-                                                <img class="responses-star1 mt-1 starticon" src="icons/Group 2411.png">
-
+                                                <img class="responses-star1 mt-1 starticon" src="{{asset('theme/icons/Group 2411.png')}}">
                                             </div>
                                         </div>
                                     </div>
@@ -314,51 +240,46 @@
                             <div class="col-lg-5 col-md-7 col-sm-12 col-12" style="padding-left: 20px;">
                                 <p style="margin-bottom: 0.5rem;" class="looking"><b>Looking for a move</b></p>
                                 <p id="request-textID2" class="text-start">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                             </div>
                         </div>
                         <div id="responsesID1" class="col-12 response responsetop" style="padding-left: 10px;">
-                            <img src="icons/ic_textsms_-1.png" class="responseicon" style="width: 16px;height: 15px;margin-top: 5px;">
+                            <img src="{{asset('theme/icons/ic_textsms_-1.png')}}" class="responseicon" style="width: 16px;height: 15px;margin-top: 5px;">
                             <p class="responses-buttons1234 text-start responsetext">2 Responses</p>
                         </div>
                         <hr id="LineID1" class="hrtop">
                         <div class="row pt-2 rowtop" style="padding-left: 10px;">
                             <div class="col-md-2 col-sm-4 col-6 d-flex pt-1">
-                                <img src="icons/ic_place_-2.png" class="lebardoicon" style="width: 15px;height: 22px;">
+                                <img src="{{asset('theme/icons/ic_place_-2.png')}}" class="lebardoicon" style="width: 15px;height: 22px;">
                                 <p class="responses-buttons1234 text-start lebardotext">Le Bardo</p>
                             </div>
                             <div class="col-md-2 col-sm-4 col-6 d-flex pt-1 categorytop">
-                                <img src="icons/ic_label_24px.png" class="categryicon iconcategory" style="    width: 21px;
-                                        height: 13px;
-                                        margin-top: 3px;">
+                                <img src="{{asset('theme/icons/ic_label_24px.png')}}" class="categryicon iconcategory" style="    width: 21px;
+                                height: 13px;
+                                margin-top: 3px;">
                                 <p class="responses-buttons1234 text-start  categorytext">Categories</p>
                             </div>
                             <div class="col-md-2 col-sm-4 col-6 d-flex pt-1 distanceside">
-                                <img src="icons/Union 21.png" class="arrow" style="    width: 22px;
-                                        height: 15px;
-                                        padding-top: 3px;">
+                                <img src="{{asset('theme/icons/Union 21.png')}}" class="arrow" style="    width: 22px;
+                                height: 15px;
+                                padding-top: 3px;">
                                 <p class="responses-buttons1234 text-start distance">5.2Km</p>
                             </div>
                             <div id="responsesID2" class="col-md-2 col-sm-4 col-12 pt-1 ">
-                                <img src="icons/ic_textsms_-1.png" style="width: 16px;height: 15px;margin-top: 5px;">
+                                <img src="{{asset('theme/icons/ic_textsms_-1.png')}}" style="width: 16px;height: 15px;margin-top: 5px;">
                                 <p class="responses-buttons1234 text-start response2 responsetop">2 Responses</p>
                             </div>
-
                             <div class="col-md-2 col-sm-4 col-12 pt-1 myrequest">
-
                             </div>
                             <div class="col-md-2 col-sm-4 col-12 pt-1 myrequest">
                                 <!-- <img src="icons/button.png" id="start" class="Contact-b1">
- -->
+                                -->
                                 <select class="selectoption ">
                                     <option>Choose</option>
                                     <option>Close</option>
                                     <option>Cancel</option>
                                 </select>
-
                             </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -372,20 +293,19 @@
                             </div>
                             <div class="text-end d-flex">
                                 <button type="button" class="QuotationButton">
-                                    <p class="responses-tQ1">$5</p>
+                                <p class="responses-tQ1">$5</p>
                                 </button>
-
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-4 col-12 picturebottom">
                                 <div class="d-flex" style="justify-content: left;">
                                     <div class="" style="position: relative;">
-                                        <a href="ProfessionalProfile.html"> <img class="requestFaceImg1" src="icons/asset-1.png"></a>
+                                        <a href="{{route('professionalProfile')}}"> <img class="requestFaceImg1" src="{{asset('theme/icons/asset-1.png')}}"></a>
                                     </div>
                                     <div class="text-start CardNameStar">
                                         <div class="row">
-                                            <a href="ProfessionalProfile.html" style="text-decoration:none">
+                                            <a href="{{route('professionalProfile')}}" style="text-decoration:none">
                                                 <p class="Responses-Name1 text-start" style="margin-bottom: 0.5rem;color: black;">
                                                     <b>Jonny David</b>
                                                 </p>
@@ -393,8 +313,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col d-flex">
-                                                <img class="responses-star1 mt-1 starticon" src="icons/Group 2411.png">
-
+                                                <img class="responses-star1 mt-1 starticon" src="{{asset('theme/icons/Group 2411.png')}}">
                                             </div>
                                         </div>
                                     </div>
@@ -403,51 +322,46 @@
                             <div class="col-lg-5 col-md-7 col-sm-12 col-12" style="padding-left: 20px;">
                                 <p style="margin-bottom: 0.5rem;" class="looking"><b>Looking for a move</b></p>
                                 <p id="request-textID2" class="text-start">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                             </div>
                         </div>
                         <div id="responsesID1" class="col-12 response responsetop" style="padding-left: 10px;">
-                            <img src="icons/ic_textsms_-1.png" class="responseicon" style="width: 16px;height: 15px;margin-top: 5px;">
+                            <img src="{{asset('theme/icons/ic_textsms_-1.png')}}" class="responseicon" style="width: 16px;height: 15px;margin-top: 5px;">
                             <p class="responses-buttons1234 text-start responsetext">2 Responses</p>
                         </div>
                         <hr id="LineID1" class="hrtop">
                         <div class="row pt-2 rowtop" style="padding-left: 10px;">
                             <div class="col-md-2 col-sm-4 col-6 d-flex pt-1">
-                                <img src="icons/ic_place_-2.png" class="lebardoicon" style="width: 15px;height: 22px;">
+                                <img src="{{asset('theme/icons/ic_place_-2.png')}}" class="lebardoicon" style="width: 15px;height: 22px;">
                                 <p class="responses-buttons1234 text-start lebardotext">Le Bardo</p>
                             </div>
                             <div class="col-md-2 col-sm-4 col-6 d-flex pt-1 categorytop">
-                                <img src="icons/ic_label_24px.png" class="categryicon iconcategory" style="    width: 21px;
-                                        height: 13px;
-                                        margin-top: 3px;">
+                                <img src="{{asset('theme/icons/ic_label_24px.png')}}" class="categryicon iconcategory" style="    width: 21px;
+                                height: 13px;
+                                margin-top: 3px;">
                                 <p class="responses-buttons1234 text-start  categorytext">Categories</p>
                             </div>
                             <div class="col-md-2 col-sm-4 col-6 d-flex pt-1 distanceside">
-                                <img src="icons/Union 21.png" class="arrow" style="    width: 22px;
-                                        height: 15px;
-                                        padding-top: 3px;">
+                                <img src="{{asset('theme/icons/Union 21.png')}}" class="arrow" style="    width: 22px;
+                                height: 15px;
+                                padding-top: 3px;">
                                 <p class="responses-buttons1234 text-start distance">5.2Km</p>
                             </div>
                             <div id="responsesID2" class="col-md-2 col-sm-4 col-12 pt-1 ">
-                                <img src="icons/ic_textsms_-1.png" style="width: 16px;height: 15px;margin-top: 5px;">
+                                <img src="{{asset('theme/icons/ic_textsms_-1.png')}}" style="width: 16px;height: 15px;margin-top: 5px;">
                                 <p class="responses-buttons1234 text-start response2 responsetop">2 Responses</p>
                             </div>
-
                             <div class="col-md-2 col-sm-4 col-12 pt-1 myrequest">
-
                             </div>
                             <div class="col-md-2 col-sm-4 col-12 pt-1 myrequest">
                                 <!-- <img src="icons/button.png" id="start" class="Contact-b1">
- -->
+                                -->
                                 <select class="selectoption ">
                                     <option>Choose</option>
                                     <option>Close</option>
                                     <option>Cancel</option>
                                 </select>
-
                             </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -461,20 +375,19 @@
                             </div>
                             <div class="text-end d-flex">
                                 <button type="button" class="QuotationButton">
-                                    <p class="responses-tQ1">$5</p>
+                                <p class="responses-tQ1">$5</p>
                                 </button>
-
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-4 col-12 picturebottom">
                                 <div class="d-flex" style="justify-content: left;">
                                     <div class="" style="position: relative;">
-                                        <a href="ProfessionalProfile.html"> <img class="requestFaceImg1" src="icons/asset-1.png"></a>
+                                        <a href="{{route('professionalProfile')}}"> <img class="requestFaceImg1" src="{{asset('theme/icons/asset-1.png')}}"></a>
                                     </div>
                                     <div class="text-start CardNameStar">
                                         <div class="row">
-                                            <a href="ProfessionalProfile.html" style="text-decoration:none">
+                                            <a href="{{route('professionalProfile')}}" style="text-decoration:none">
                                                 <p class="Responses-Name1 text-start" style="margin-bottom: 0.5rem;color: black;">
                                                     <b>Jonny David</b>
                                                 </p>
@@ -482,8 +395,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col d-flex">
-                                                <img class="responses-star1 mt-1 starticon" src="icons/Group 2411.png">
-
+                                                <img class="responses-star1 mt-1 starticon" src="{{asset('theme/icons/Group 2411.png')}}">
                                             </div>
                                         </div>
                                     </div>
@@ -492,51 +404,46 @@
                             <div class="col-lg-5 col-md-7 col-sm-12 col-12" style="padding-left: 20px;">
                                 <p style="margin-bottom: 0.5rem;" class="looking"><b>Looking for a move</b></p>
                                 <p id="request-textID2" class="text-start">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                             </div>
                         </div>
                         <div id="responsesID1" class="col-12 response responsetop" style="padding-left: 10px;">
-                            <img src="icons/ic_textsms_-1.png" class="responseicon" style="width: 16px;height: 15px;margin-top: 5px;">
+                            <img src="{{asset('theme/icons/ic_textsms_-1.png')}}" class="responseicon" style="width: 16px;height: 15px;margin-top: 5px;">
                             <p class="responses-buttons1234 text-start responsetext">2 Responses</p>
                         </div>
                         <hr id="LineID1" class="hrtop">
                         <div class="row pt-2 rowtop" style="padding-left: 10px;">
                             <div class="col-md-2 col-sm-4 col-6 d-flex pt-1">
-                                <img src="icons/ic_place_-2.png" class="lebardoicon" style="width: 15px;height: 22px;">
+                                <img src="{{asset('theme/icons/ic_place_-2.png')}}" class="lebardoicon" style="width: 15px;height: 22px;">
                                 <p class="responses-buttons1234 text-start lebardotext">Le Bardo</p>
                             </div>
                             <div class="col-md-2 col-sm-4 col-6 d-flex pt-1 categorytop">
-                                <img src="icons/ic_label_24px.png" class="categryicon iconcategory" style="    width: 21px;
-                                        height: 13px;
-                                        margin-top: 3px;">
+                                <img src="{{asset('theme/icons/ic_label_24px.png')}}" class="categryicon iconcategory" style="    width: 21px;
+                                height: 13px;
+                                margin-top: 3px;">
                                 <p class="responses-buttons1234 text-start  categorytext">Categories</p>
                             </div>
                             <div class="col-md-2 col-sm-4 col-6 d-flex pt-1 distanceside">
-                                <img src="icons/Union 21.png" class="arrow" style="    width: 22px;
-                                        height: 15px;
-                                        padding-top: 3px;">
+                                <img src="{{asset('theme/icons/Union 21.png')}}" class="arrow" style="    width: 22px;
+                                height: 15px;
+                                padding-top: 3px;">
                                 <p class="responses-buttons1234 text-start distance">5.2Km</p>
                             </div>
                             <div id="responsesID2" class="col-md-2 col-sm-4 col-12 pt-1 ">
-                                <img src="icons/ic_textsms_-1.png" style="width: 16px;height: 15px;margin-top: 5px;">
+                                <img src="{{asset('theme/icons/ic_textsms_-1.png')}}" style="width: 16px;height: 15px;margin-top: 5px;">
                                 <p class="responses-buttons1234 text-start response2 responsetop">2 Responses</p>
                             </div>
-
                             <div class="col-md-2 col-sm-4 col-12 pt-1 myrequest">
-
                             </div>
                             <div class="col-md-2 col-sm-4 col-12 pt-1 myrequest">
                                 <!-- <img src="icons/button.png" id="start" class="Contact-b1">
- -->
+                                -->
                                 <select class="selectoption ">
                                     <option>Choose</option>
                                     <option>Close</option>
                                     <option>Cancel</option>
                                 </select>
-
                             </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -550,20 +457,19 @@
                             </div>
                             <div class="text-end d-flex">
                                 <button type="button" class="QuotationButton">
-                                    <p class="responses-tQ1">$5</p>
+                                <p class="responses-tQ1">$5</p>
                                 </button>
-
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-4 col-12 picturebottom">
                                 <div class="d-flex" style="justify-content: left;">
                                     <div class="" style="position: relative;">
-                                        <a href="ProfessionalProfile.html"> <img class="requestFaceImg1" src="icons/asset-1.png"></a>
+                                        <a href="{{route('professionalProfile')}}"> <img class="requestFaceImg1" src="{{asset('theme/icons/asset-1.png')}}"></a>
                                     </div>
                                     <div class="text-start CardNameStar">
                                         <div class="row">
-                                            <a href="ProfessionalProfile.html" style="text-decoration:none">
+                                            <a href="{{route('professionalProfile')}}" style="text-decoration:none">
                                                 <p class="Responses-Name1 text-start" style="margin-bottom: 0.5rem;color: black;">
                                                     <b>Jonny David</b>
                                                 </p>
@@ -571,8 +477,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col d-flex">
-                                                <img class="responses-star1 mt-1 starticon" src="icons/Group 2411.png">
-
+                                                <img class="responses-star1 mt-1 starticon" src="{{asset('theme/icons/Group 2411.png')}}">
                                             </div>
                                         </div>
                                     </div>
@@ -581,51 +486,46 @@
                             <div class="col-lg-5 col-md-7 col-sm-12 col-12" style="padding-left: 20px;">
                                 <p style="margin-bottom: 0.5rem;" class="looking"><b>Looking for a move</b></p>
                                 <p id="request-textID2" class="text-start">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                             </div>
                         </div>
                         <div id="responsesID1" class="col-12 response responsetop" style="padding-left: 10px;">
-                            <img src="icons/ic_textsms_-1.png" class="responseicon" style="width: 16px;height: 15px;margin-top: 5px;">
+                            <img src="{{asset('theme/icons/ic_textsms_-1.png')}}" class="responseicon" style="width: 16px;height: 15px;margin-top: 5px;">
                             <p class="responses-buttons1234 text-start responsetext">2 Responses</p>
                         </div>
                         <hr id="LineID1" class="hrtop">
                         <div class="row pt-2 rowtop" style="padding-left: 10px;">
                             <div class="col-md-2 col-sm-4 col-6 d-flex pt-1">
-                                <img src="icons/ic_place_-2.png" class="lebardoicon" style="width: 15px;height: 22px;">
+                                <img src="{{asset('theme/icons/ic_place_-2.png')}}" class="lebardoicon" style="width: 15px;height: 22px;">
                                 <p class="responses-buttons1234 text-start lebardotext">Le Bardo</p>
                             </div>
                             <div class="col-md-2 col-sm-4 col-6 d-flex pt-1 categorytop">
-                                <img src="icons/ic_label_24px.png" class="categryicon iconcategory" style="    width: 21px;
-                                        height: 13px;
-                                        margin-top: 3px;">
+                                <img src="{{asset('theme/icons/ic_label_24px.png')}}" class="categryicon iconcategory" style="    width: 21px;
+                                height: 13px;
+                                margin-top: 3px;">
                                 <p class="responses-buttons1234 text-start  categorytext">Categories</p>
                             </div>
                             <div class="col-md-2 col-sm-4 col-6 d-flex pt-1 distanceside">
-                                <img src="icons/Union 21.png" class="arrow" style="    width: 22px;
-                                        height: 15px;
-                                        padding-top: 3px;">
+                                <img src="{{asset('theme/icons/Union 21.png')}}" class="arrow" style="    width: 22px;
+                                height: 15px;
+                                padding-top: 3px;">
                                 <p class="responses-buttons1234 text-start distance">5.2Km</p>
                             </div>
                             <div id="responsesID2" class="col-md-2 col-sm-4 col-12 pt-1 ">
-                                <img src="icons/ic_textsms_-1.png" style="width: 16px;height: 15px;margin-top: 5px;">
+                                <img src="{{asset('theme/icons/ic_textsms_-1.png')}}" style="width: 16px;height: 15px;margin-top: 5px;">
                                 <p class="responses-buttons1234 text-start response2 responsetop">2 Responses</p>
                             </div>
-
                             <div class="col-md-2 col-sm-4 col-12 pt-1 myrequest">
-
                             </div>
                             <div class="col-md-2 col-sm-4 col-12 pt-1 myrequest">
                                 <!-- <img src="icons/button.png" id="start" class="Contact-b1">
- -->
+                                -->
                                 <select class="selectoption ">
                                     <option>Choose</option>
                                     <option>Close</option>
                                     <option>Cancel</option>
                                 </select>
-
                             </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -639,20 +539,19 @@
                             </div>
                             <div class="text-end d-flex">
                                 <button type="button" class="QuotationButton">
-                                    <p class="responses-tQ1">$5</p>
+                                <p class="responses-tQ1">$5</p>
                                 </button>
-
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-4 col-12 picturebottom">
                                 <div class="d-flex" style="justify-content: left;">
                                     <div class="" style="position: relative;">
-                                        <a href="ProfessionalProfile.html"> <img class="requestFaceImg1" src="icons/asset-1.png"></a>
+                                        <a href="{{route('professionalProfile')}}"> <img class="requestFaceImg1" src="{{asset('theme/icons/asset-1.png')}}"></a>
                                     </div>
                                     <div class="text-start CardNameStar">
                                         <div class="row">
-                                            <a href="ProfessionalProfile.html" style="text-decoration:none">
+                                            <a href="{{route('professionalProfile')}}" style="text-decoration:none">
                                                 <p class="Responses-Name1 text-start" style="margin-bottom: 0.5rem;color: black;">
                                                     <b>Jonny David</b>
                                                 </p>
@@ -660,8 +559,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col d-flex">
-                                                <img class="responses-star1 mt-1 starticon" src="icons/Group 2411.png">
-
+                                                <img class="responses-star1 mt-1 starticon" src="{{asset('theme/icons/Group 2411.png')}}">
                                             </div>
                                         </div>
                                     </div>
@@ -670,65 +568,50 @@
                             <div class="col-lg-5 col-md-7 col-sm-12 col-12" style="padding-left: 20px;">
                                 <p style="margin-bottom: 0.5rem;" class="looking"><b>Looking for a move</b></p>
                                 <p id="request-textID2" class="text-start">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                             </div>
                         </div>
                         <div id="responsesID1" class="col-12 response responsetop" style="padding-left: 10px;">
-                            <img src="icons/ic_textsms_-1.png" class="responseicon" style="width: 16px;height: 15px;margin-top: 5px;">
+                            <img src="{{asset('theme/icons/ic_textsms_-1.png')}}" class="responseicon" style="width: 16px;height: 15px;margin-top: 5px;">
                             <p class="responses-buttons1234 text-start responsetext">2 Responses</p>
                         </div>
                         <hr id="LineID1" class="hrtop">
                         <div class="row pt-2 rowtop" style="padding-left: 10px;">
                             <div class="col-md-2 col-sm-4 col-6 d-flex pt-1">
-                                <img src="icons/ic_place_-2.png" class="lebardoicon" style="width: 15px;height: 22px;">
+                                <img src="{{asset('theme/icons/ic_place_-2.png')}}" class="lebardoicon" style="width: 15px;height: 22px;">
                                 <p class="responses-buttons1234 text-start lebardotext">Le Bardo</p>
                             </div>
                             <div class="col-md-2 col-sm-4 col-6 d-flex pt-1 categorytop">
-                                <img src="icons/ic_label_24px.png" class="categryicon iconcategory" style="    width: 21px;
-                                        height: 13px;
-                                        margin-top: 3px;">
+                                <img src="{{asset('theme/icons/ic_label_24px.png')}}" class="categryicon iconcategory" style="    width: 21px;
+                                height: 13px;
+                                margin-top: 3px;">
                                 <p class="responses-buttons1234 text-start  categorytext">Categories</p>
                             </div>
                             <div class="col-md-2 col-sm-4 col-6 d-flex pt-1 distanceside">
-                                <img src="icons/Union 21.png" class="arrow" style="    width: 22px;
-                                        height: 15px;
-                                        padding-top: 3px;">
+                                <img src="{{asset('theme/icons/Union 21.png')}}" class="arrow" style="    width: 22px;
+                                height: 15px;
+                                padding-top: 3px;">
                                 <p class="responses-buttons1234 text-start distance">5.2Km</p>
                             </div>
                             <div id="responsesID2" class="col-md-2 col-sm-4 col-12 pt-1 ">
-                                <img src="icons/ic_textsms_-1.png" style="width: 16px;height: 15px;margin-top: 5px;">
+                                <img src="{{asset('theme/icons/ic_textsms_-1.png')}}" style="width: 16px;height: 15px;margin-top: 5px;">
                                 <p class="responses-buttons1234 text-start response2 responsetop">2 Responses</p>
                             </div>
-
                             <div class="col-md-2 col-sm-4 col-12 pt-1 myrequest">
-
                             </div>
                             <div class="col-md-2 col-sm-4 col-12 pt-1 myrequest">
                                 <!-- <img src="icons/button.png" id="start" class="Contact-b1">
- -->
+                                -->
                                 <select class="selectoption ">
                                     <option>Choose</option>
                                     <option>Close</option>
                                     <option>Cancel</option>
                                 </select>
-
                             </div>
-
-
                         </div>
                     </div>
                 </div>
             </a>
-
-
-
-
-
-
-
-
-
-
         </div>
     </section>
     <!--Publish Request-->
@@ -737,9 +620,9 @@
             <div class="background-image2" style="border-radius: 5px;">
                 <div class="text-start d-flex flex-wrap PublishRequestROW" style="justify-content:center;">
                     <p class="Publish-text1 mt-2 lastimgtext">Now you can post
-                        your request</p>
+                    your request</p>
                     <button class="btn btn-small smallbutton" type="button" style="background-color:white; color: #FA4673; height: 40px;border-color: #FA4673; border-width: 2px; border-radius: 10px;">
-                        <p style="font-size: 18; font-weight: bolder;">Publish Request</p>
+                    <p style="font-size: 18; font-weight: bolder;">Publish Request</p>
                     </button>
                 </div>
             </div>
@@ -762,8 +645,8 @@
                     <li class="page-item">
                         <a class="page-link" href="#" aria-label="Next" style="border:none;">
                             <span aria-hidden="true">
-                                <img src="icons/ic_keyboard_arrow_right_-1.png" style="width:0.5rem;">
-                                <img src="icons/ic_keyboard_arrow_right_-1.png" style="width:0.5rem;">
+                                <img src="{{asset('theme/icons/ic_keyboard_arrow_right_-1.png')}}" style="width:0.5rem;">
+                                <img src="{{asset('theme/icons/ic_keyboard_arrow_right_-1.png')}}" style="width:0.5rem;">
                             </span>
                         </a>
                     </li>
@@ -832,7 +715,6 @@
                             <div class="col text-center mt-4">
                                 <a href="" data-bs-toggle="modal" data-bs-target="#staticBackdropReport2" data-bs-dismiss="modal" class="YesButton">Yes</a>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -854,7 +736,6 @@
                             <div class="text-center">
                                 <a href="" class="YesButton">Report</a>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -878,7 +759,6 @@
                         </select>
                     </div>
                     <div class="form-group">
-
                         <div class="input-group mb-3">
                             <input type="text" class="FCinput1 form-control" placeholder="Telephone Number" aria-label="Telephone Number" aria-describedby="basic-addon1">
                         </div>
@@ -929,7 +809,7 @@
                     <p class="MBText1"><b>Welcome to Ya jari</b></p>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" style="height: 3rem;
-                                border-radius: 10px;" placeholder="Email Address" aria-label="Email Address" aria-describedby="basic-addon1">
+                        border-radius: 10px;" placeholder="Email Address" aria-label="Email Address" aria-describedby="basic-addon1">
                     </div>
                     <div class="LRM1Button row">
                         <a role="button" data-bs-target="#LoginRegisterModal4" data-bs-toggle="modal" data-bs-dismiss="modal">
@@ -974,18 +854,18 @@
                     <div class="MHmodel3 modal-header row">
                         <div class="col-3 col-sm-3">
                             <button type="button" data-bs-dismiss="modal" aria-label="Close" style="background-color: white;border: none;">
-                                <img class="model-img1" src="icons/ic_keyboard_arrow_right_24Blackpx.png">
+                            <img class="model-img1" src="icons/ic_keyboard_arrow_right_24Blackpx.png">
                             </button>
                         </div>
                         <div class="col-9 col-sm-9">
                             <p class="text-start" style="font-size: 14px;
-                                            font-weight: bolder;    position: relative;
-                                        top: 10px;" id="LoginRegisterModal3Label">Conform Telephone Number</p>
+                                font-weight: bolder;    position: relative;
+                            top: 10px;" id="LoginRegisterModal3Label">Conform Telephone Number</p>
                         </div>
                     </div>
                     <div class="Modal3Body modal-body">
                         <p style="font-size: 14px;
-                                    text-align: center;">Enter the code sent to your Telephone number through SMS </p>
+                        text-align: center;">Enter the code sent to your Telephone number through SMS </p>
                         <div class="Modal3IputDIV d-flex">
                             <input type="text" class="Model3input form-control" placeholder="  1" aria-label="1">
                             <input type="text" class="Model3input form-control" placeholder=" 2" aria-label="2">
@@ -1022,7 +902,7 @@
                     <div class="MHmodel3 modal-header row">
                         <div class="col-3 col-sm-4">
                             <button type="button" data-bs-dismiss="modal" aria-label="Close" style="background-color: white;border: none;">
-                                <img class="model-img1" src="icons/ic_keyboard_arrow_right_24Blackpx.png">
+                            <img class="model-img1" src="icons/ic_keyboard_arrow_right_24Blackpx.png">
                             </button>
                         </div>
                         <div class="col-9 col-sm-8">
@@ -1040,34 +920,32 @@
                         </div>
                         <div class="input-group mb-2">
                             <input type="text" style="display:none;height: 2.5rem;
-                                        background-image: url(icons/ic_person_-1.png);
-                                        background-repeat: no-repeat;
-                                        background-size: 12px 12px;
-                                        background-position: right 2rem center;
-                                        font-size: 12px;
-                                        border-radius: 10px 10px 0 0;" class="Modal4input1 form-control private" placeholder="First Name" aria-label="First Name" aria-describedby="basic-addon1">
+                            background-image: url(icons/ic_person_-1.png);
+                            background-repeat: no-repeat;
+                            background-size: 12px 12px;
+                            background-position: right 2rem center;
+                            font-size: 12px;
+                            border-radius: 10px 10px 0 0;" class="Modal4input1 form-control private" placeholder="First Name" aria-label="First Name" aria-describedby="basic-addon1">
                         </div>
                         <div class="input-group mb-2">
                             <input type="text" style="display:none;    height: 2.5rem;
-                                        background-image: url(icons/ic_person_-1.png);
-                                        background-repeat: no-repeat;
-                                        background-size: 12px 12px;
-                                        background-position: right 2rem center;
-                                        font-size: 12px;border-radius: 0 0 10px 10px;" class="Modal4input2 form-control private" placeholder="Last Name" aria-label="Last Name" aria-describedby="basic-addon1">
+                            background-image: url(icons/ic_person_-1.png);
+                            background-repeat: no-repeat;
+                            background-size: 12px 12px;
+                            background-position: right 2rem center;
+                            font-size: 12px;border-radius: 0 0 10px 10px;" class="Modal4input2 form-control private" placeholder="Last Name" aria-label="Last Name" aria-describedby="basic-addon1">
                         </div>
                         <div class="input-group mb-2">
                             <input type="text" style="display:none;height: 2.5rem;
-                                        background-image: url(icons/ic_person_-1.png);
-                                        background-repeat: no-repeat;
-                                        background-size: 12px 12px;
-                                        border-radius: 10px 10px 0 0;
-                                        background-position: right 2rem center;font-size: 12px;" class=" form-control professional" placeholder="Company Name" aria-label="Company Name" aria-describedby="basic-addon1">
+                            background-image: url(icons/ic_person_-1.png);
+                            background-repeat: no-repeat;
+                            background-size: 12px 12px;
+                            border-radius: 10px 10px 0 0;
+                            background-position: right 2rem center;font-size: 12px;" class=" form-control professional" placeholder="Company Name" aria-label="Company Name" aria-describedby="basic-addon1">
                         </div>
-
                         <div class="input-group mb-2">
                             <input type="text" class="Modal4input3 form-control" placeholder="Address" aria-label="Address" aria-describedby="basic-addon1">
                         </div>
-
                         <div class="input-group mb-2">
                             <input type="text" style="display:none;border-radius: 10px 10px 0 0;font-size: 12px;" class="Modal4input4 form-control professional" placeholder="SIRET Number" aria-label="SIRET Number" aria-describedby="basic-addon1">
                         </div>
@@ -1093,11 +971,10 @@
                                 </label>
                             </div>
                         </div>
-
                         <div class="LRM1Button row" style="margin-bottom: 0.2rem;">
                             <a role="button" data-bs-target="#LoginRegisterModal5" data-bs-toggle="modal" data-bs-dismiss="modal">
                                 <p style="color: white;position: relative;
-                                            top: 13px;">Continue</p>
+                                top: 13px;">Continue</p>
                             </a>
                         </div>
                     </div>
@@ -1118,7 +995,7 @@
                     <div class="MHmodel3 modal-header row">
                         <div class="col-3 col-sm-4">
                             <button type="button" data-bs-dismiss="modal" aria-label="Close" style="background-color: white;border: none;">
-                                <img class="model-img1" src="icons/ic_keyboard_arrow_right_24Blackpx.png">
+                            <img class="model-img1" src="icons/ic_keyboard_arrow_right_24Blackpx.png">
                             </button>
                         </div>
                         <div class="col-9 col-sm-8">
@@ -1194,13 +1071,13 @@
                     <p class=" text-center" style="font-size: 14px;"><b>Check your email</b></p>
                     <div class="input-group mb-3">
                         <input type="text" style="border-radius: 10px;
-                                    height: 3rem;" class="form-control" placeholder="Example@email.com" aria-label="Example@email.com" aria-describedby="basic-addon1">
+                        height: 3rem;" class="form-control" placeholder="Example@email.com" aria-label="Example@email.com" aria-describedby="basic-addon1">
                     </div>
                     <p class="Modal6Text2 mb-5">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document</p>
                     <div class="LRM1Button row" style="margin: auto;">
                         <a role="button" href="ChoseCategory.html" style="text-decoration:none;">
                             <p style="color: white;font-size: 13px;position: relative;
-                                        top: 15px;">Continue</p>
+                            top: 15px;">Continue</p>
                         </a>
                     </div>
                     <div class="row" style="margin: auto;">
@@ -1226,7 +1103,6 @@
                 </div>
                 <div class="modal-bodysignin" style="padding-top: 1rem;">
                     <p class="MBText1"><b>Welcome to Ya jari</b></p>
-
                     <div class="row">
                         <div class="col-12">
                             <div class="form-group">
@@ -1257,89 +1133,27 @@
         </div>
     </div>
     <!--Footer-->
-    <section class="bg-light py-5">
-        <div class="container" style="width: 90%;">
-            <div class="row f-img " style="padding-top:0rem;">
-                <div class="col-lg-3">
-                    <img src="icons/yajari-removebg-preview-1.png" style="width: 16rem;position: relative;top: -15px;">
-                </div>
-                <div class="col-lg-9 d-flex pt-5">
-                    <p style="font-size: 16px; font-weight: 900;padding-top: 15px;" class="followus">Follow Us:</p>
-                    <div class="text-end socialicon">
-                        <img src="icons/Group 1611.png" class="follow-img">
-                        <img src="icons/Group 1613.png" class="follow-img">
-                        <img src="icons/Group 1614.png" class="follow-img">
-                        <img src="icons/Group 1615.png" class="follow-img">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <p style="font-size: 16px; font-weight:900;"><b>FREQUENTLY ASKED QUESTION / HELP</b></p>
-                    <div class="row">
-                        <a class="btn text-start" style="font-size: 12px; font-weight: bold;">I can't log into my
-                            account</a>
-                        <a class="btn text-start" style="font-size: 12px; font-weight: bold;">I can't register to my
-                            account</a>
-                        <a class="btn text-start" style="font-size: 12px; font-weight: bold;">How to reset / change
-                            password</a>
-                        <a class="btn text-start" style="font-size: 12px; font-weight: bold;">I can't find my password
-                            anymore</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <p style="font-size: 16px; font-weight:900;"><b>PRESENTATION</b></p>
-                    <div class="row">
-                        <a class="btn text-start" style="font-size: 12px; font-weight: bold;">Who are we?</a>
-                        <a class="btn text-start" style="font-size: 12px; font-weight: bold;">How it works?</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <p style="font-size: 16px; font-weight:900;"><b>LEGAL INGORMATION</b></p>
-                    <div class="row">
-                        <a href="ContactUs.html" class="btn text-start" style="font-size: 12px; font-weight: bold;">Contact Us</a>
-                        <a class="btn text-start" style="font-size: 12px; font-weight: bold;">General Conditions of Sale
-                            and Use</a>
-                        <a class="btn text-start" style="font-size: 12px; font-weight: bold;">Confidentiality and
-                            privacy policy</a>
-                        <a class="btn text-start" style="font-size: 12px; font-weight: bold;">Legal Notice</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <p style="font-size: 16px; font-weight:900;"><b>OUR APPLICATIONS</b></p>
-                    <div class="row">
-                        <a class="btn text-start" style="font-size: 12px; font-weight: bold;"><img src="icons/Group 2387.png" style="width: 10rem;"></a>
-                        <a class="btn text-start" style="font-size: 12px; font-weight: bold;"><img src="icons/Group 2388.png" style="width: 10rem;"></a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
+    @include('frontend.layout.footer')
+    @include('frontend.layout.scripts')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('.purpose').on('change', function() {
-                if (this.value == '1')
-                //.....................^.......
-                {
-                    $(".professional").show();
-                    $(".private").hide();
-                } else if (this.value == '2') {
-                    $(".private").show();
-                    $(".professional").hide();
-                } else {
-                    $(".professional").hide();
-                    $(".private").hide();
-                }
-            });
-        });
-
+    $(document).ready(function() {
+    $('.purpose').on('change', function() {
+    if (this.value == '1')
+    //.....................^.......
+    {
+    $(".professional").show();
+    $(".private").hide();
+    } else if (this.value == '2') {
+    $(".private").show();
+    $(".professional").hide();
+    } else {
+    $(".professional").hide();
+    $(".private").hide();
+    }
+    });
+    });
     </script>
-
-</body>
-
-</html>
+    </body>
+    </html>

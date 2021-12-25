@@ -22,11 +22,11 @@
                             <span class="col-md-12 inputError" for="userType">Type field is required</span>
                         </div>
                         <div class="input-group mb-1 private" style="display:none;">
-                            <input type="text" class="Modal4input5 form-control inputField_c" placeholder="First Name" id="userFirstName" aria-label="First Name" aria-describedby="basic-addon1">
+                            <input type="text" name="first_name"  class="Modal4input5 form-control inputField_c" placeholder="First Name" id="userFirstName" aria-label="First Name" aria-describedby="basic-addon1">
                             <span class="col-md-12 inputError" for="userFirstName">First name field is required</span>
                         </div>
                         <div class="input-group mb-1 private" style="display:none;">
-                            <input type="text" class="Modal4input2 form-control inputField_c" placeholder="Last Name" id="userLastName" aria-label="Last Name" aria-describedby="basic-addon1">
+                            <input type="text" name="last_name" class="Modal4input2 form-control inputField_c" placeholder="Last Name" id="userLastName" aria-label="Last Name" aria-describedby="basic-addon1">
                             <span class="col-md-12 inputError" for="userLastName">Last name field is required</span>
                         </div>
                         <div class="input-group mb-1 professional" style="display:none;">
@@ -48,7 +48,7 @@
                             <span class="col-md-12 inputError" for="userPhoneNumber">Phone Number field is required</span>
                         </div>
                         <div class="input-group mb-1">
-                            <input type="password" class="Modal4input6 form-control inputField" placeholder="Password" id="userPassword" aria-label="password" aria-describedby="basic-addon1">
+                            <input type="password"  class="Modal4input6 form-control inputField" placeholder="Password" id="userPassword" aria-label="password" aria-describedby="basic-addon1">
                             <span class="col-md-12 inputError" for="userPassword">Password field is required</span>
                         </div>
                         <div class="">

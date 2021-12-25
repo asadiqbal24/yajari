@@ -41,9 +41,9 @@ class AuthController extends Controller
             return redirect()->back()->with('danger','Username & Password combination doesn\'t not match');
         }   
 
+           dd(Auth::user());
 
-
-    dd(Auth::user()->hasAccess(['user']));
+   
         if(Auth::user()->hasAccess(['admin'])){
           alert()->success('Welcome To Admin Dashboard');
           return redirect()->route('admin-home')->with('success','WELCOME'.Auth::user()->username.'...');

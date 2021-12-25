@@ -1,19 +1,30 @@
-<!doctype html>
-<html lang="en">
+@include('frontend.layout.head')
+@section('myfavouritesneighbour','active')
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="NeighborsInSpotlightStyle.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <title>ya jari</title>
+    <link rel="stylesheet" href="{{asset('theme/css/NeighborsInSpotlightStyle.css')}}">
     <style type="text/css">
+
+
+      
+        @media all and (min-width: 1300px) {
+            .background-image {
+               width: 100%;
+    height: 190px;
+    border-radius: 2%;
+    background-image: url(theme/pictures/Group\ 12.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden
+            }
+
+            .showcase-text1 {
+    font-size: 22px;
+    font-weight: 900;
+    padding-top: 2rem;
+}
+
+        }  
         @media all and (min-width: 1440px) {
             .socialicon {
                 transform: translateX(80%);
@@ -177,29 +188,7 @@
 
 <body style="zoom:90%">
     <!--Nav Bar-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="    background-color: white;
-                box-shadow: 0px 2px 5px #acacac;">
-        <div class="container-fluid">
-            <a href="#" class="navbar-brand">
-                <img src="icons/yajari-removebg-preview-1.png" class="yajari-removebg-preview-1" alt="Yajiri">
-            </a>
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse" style="margin-left:6%">
-                <div class="navbar-nav">
-                    <a style=" padding-top: 10px;color: #3B3B3B;font-weight: bold;" href="HomePage.html" class="nav-item nav-link active">Home</a>
-                    <a style=" padding-top: 10px;color: #3B3B3B;font-weight: bold;" href="RequestsPage.html" class="nav-item  requestnav">Requests</a>
-                    <a style=" padding-top: 10px;color: #3B3B3B;font-weight: bold" href="ServiceProviders.html" class="nav-item servicesnav">Service Providers</a>
-                    <a style=" padding-top: 10px;color: white;font-weight: bold;" href="PublishRequest.html" class="nav-item nav-link navpublish publishnavbar">Publish a Request</a>
-                </div>
-                <div class="navbar-nav ms-auto">
-                    <a data-bs-toggle="modal" role="button" href="#LoginRegisterModal8" style=" padding-top: 10px;color: #3B3B3B;font-weight: bold;padding-right: 20px;" class="nav-item nav-link">Sign in</a>
-                    <a data-bs-toggle="modal" href="#LoginRegisterModal1" role="button" id="Register-MView" style=" padding-top: 10px;color: #3B3B3B;font-weight: bold;    padding-right: 40px;" class="nav-item nav-link">Register</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+     @include('frontend.layout.navbar')
     <!--Show Case-->
     <section class="ptt-3 text-center">
         <div class="container-fluid text-light" style="width: 100%;margin: auto;">
@@ -220,7 +209,7 @@
                     <div class="SearchRow search row mb-3">
                         <form class="d-flex my-2" style="justify-content: left;">
                             <a class="SearchButton" type="submit" style="border: none;">
-                                <img src="icons/Icon feather-search.png" class="SearchButtonImg">
+                                <img src="{{asset('theme/icons/Icon feather-search.png')}}" class="SearchButtonImg">
                             </a>
                             <input style="border: none;margin-left: 1rem;" class="form-control" type="search" placeholder="Search by Category" aria-label="Search">
                         </form>
@@ -259,8 +248,8 @@
                         <div class="col-sm-4 col-12">
                             <div class="d-flex" style="justify-content: left;">
                                 <div class="" style="position: relative;">
-                                    <a href="ProfessionalProfile.html" style="text-decoration:none"> <img class="requestFaceImg1" src="icons/asset-1.png">
-                                        <img src="icons/Group 2412.png" class="requestFaceImgTICK1 tickarrow">
+                                    <a href="ProfessionalProfile.html" style="text-decoration:none"> <img class="requestFaceImg1" src="{{asset('theme/icons/asset-1.png')}}">
+                                        <img src="{{asset('theme/icons/Group 2412.png')}}" class="requestFaceImgTICK1 tickarrow">
                                         <p class="particularcard">particular</p>
                                     </a>
                                 </div>

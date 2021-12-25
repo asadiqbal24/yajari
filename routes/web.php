@@ -90,6 +90,15 @@ Route::get('view-request', [RequestController::class, 'view_request'])->name('vi
 
 
 
+Route::get('my-request', [RequestController::class, 'my_request'])->name('my-request');
+
+
+
+
+Route::get('myfavourites-neighbor', [RequestController::class, 'myfavourites_neighbor'])->name('myfavourites-neighbor');
+
+
+
 
 
 

@@ -75,4 +75,14 @@ class RequestController extends Controller
     {
       return view('frontend.ViewRequest');  
     }
+
+    public function my_request()
+    {
+     return view('frontend.MyRequests');   
+    }
+
+    public function myfavourites_neighbor()
+    {
+     return view('frontend.MyFavouritesNeighbors');     
+    }
 }
