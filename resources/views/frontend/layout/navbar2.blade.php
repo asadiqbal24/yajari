@@ -37,9 +37,9 @@
                                                     </div>
                                                 </div>
                                             </a></li>
-                                            
+                                          
                                             <li>
-                                                <a class="dropdown-item" href="MyRequests.html">
+                                                <a class="dropdown-item" href="{{route('my-request')}}">
                                                     <div class="row">
                                                         <div class="col-2 col-sm-2">
                                                             <img src="{{asset('theme/icons/Icon ionic-md-help-circle.png')}}" alt="">
@@ -68,7 +68,7 @@
                                                         <div id="flush-collapseOne2" class="accordion-collapse collapse" aria-labelledby="flush-headingOne2" data-bs-parent="#accordionFlushExample2">
                                                             <div class="accordion-body" style="padding:0;">
                                                                 <ul class="ProfileDropdown" style="text-decoration: none;">
-                                                                    <li><a class="dropdown-item" href="MyFavouritesNeighbors.html">
+                                                                    <li><a class="dropdown-item" href="{{route('myfavourites-neighbor')}}">
                                                                         <div class="row">
                                                                             <div class="col-3 col-sm-3 text-end">
                                                                                 <img src="{{asset('theme/icons/Ellipse 167.png')}}" alt="">

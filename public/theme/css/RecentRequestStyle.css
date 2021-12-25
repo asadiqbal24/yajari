@@ -305,16 +305,6 @@ body {
     }
 }
 
-.background-image {
-    border-radius: 25px;
-    width: 100%;
-    height: 200px;
-    background-image: url(pictures/Group\ 12.png);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
-}
 
 @media (max-width: 766px) {
     .showcase-text1 {
@@ -767,7 +757,6 @@ textarea::placeholder {
 .background-image2 {
     width: 65%;
     height: 150px;
-    background-image: url(pictures/Group\ 2382.png);
     background-position: center;
     background-size: cover;
     position: relative;

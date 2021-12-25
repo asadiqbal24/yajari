@@ -60,7 +60,7 @@ class UserController extends Controller
         'last_name'=>$request->registerLastName??NULL,
         'company_name'=>$request->registerCompanyName,
         'address'=>$request->registerAddress,
-        'password'=>bcrypt($request->registerSendCodeViaSMS),
+        'password'=>bcrypt($request->registerPassword),
         'siret_number' => $request->registerSiretNumber,
 
 

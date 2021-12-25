@@ -11,7 +11,7 @@
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-12">
                             <div class="form-group">
-                                <input type="email" required class="form-control" id="exampleInputPassword1" name="email" placeholder="Telephone Number or Email Address" style="height: 3rem;border-radius: 10px 10px 10px 10px;">
+                                <input type="text" required class="form-control"  name="email" placeholder="Telephone Number or Email Address" style="height: 3rem;border-radius: 10px 10px 10px 10px;">
                             </div>
                         </div>
                     </div>

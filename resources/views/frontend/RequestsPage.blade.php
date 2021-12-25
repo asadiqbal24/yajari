@@ -1,7 +1,7 @@
 @include('frontend.layout.head')
 @section('sRequests','active')  
         <style type="text/css">
-        @media all and (min-width: 1366px) {
+        @media all and (min-width: 1300px) {
         .Realize-text1 {
         margin-left: 3.5rem;
         }

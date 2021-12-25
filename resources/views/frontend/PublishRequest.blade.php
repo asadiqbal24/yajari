@@ -163,7 +163,7 @@ width: 25%;
 }
 }
 </style>
-<link rel="stylesheet" href="{{asset('theme/css/PublishRequestStyle.css')}}">
+
 <body style="zoom:90%">
     <!--Nav Bar-->
     @include('frontend.layout.navbar2')
