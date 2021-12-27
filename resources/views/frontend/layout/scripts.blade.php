@@ -40,6 +40,9 @@
     </script>
 
     <script type="text/javascript">
+
+       
+        
         
         
         $('#registerModal1Continuebtn').click(function(){
@@ -49,6 +52,8 @@
             }else{
                 $('#LoginRegisterModal2').modal('hide');                
                 $('#registerEmail').val($('#userEmail').val());
+                //call ajax
+
                 $('#LoginRegisterModal4').modal('show');
             }
 
@@ -131,7 +136,11 @@
 
                 $('#registrationForm').submit();
             
-            });        
+            });
+
+
+
+
 
         
 

@@ -8,14 +8,16 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('theme/css/style.css')}}">
-    <link rel="stylesheet" href="{{asset
-    ('theme/css/RequestStyle.css')}}">
+  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css" rel="stylesheet" />
     <title>ya jari</title>
     <style type="text/css">
+
+
+        
          @media all and (min-width: 1024px) {
 
           .seemore{
@@ -397,5 +399,8 @@
             display: none;
         }
     </style>
+
+
+<meta name="csrf-token" content="{{ csrf_token() }}">
 
 </head>

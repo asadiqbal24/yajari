@@ -97,6 +97,43 @@ Route::get('my-request', [RequestController::class, 'my_request'])->name('my-req
 
 Route::get('myfavourites-neighbor', [RequestController::class, 'myfavourites_neighbor'])->name('myfavourites-neighbor');
 
+Route::post('email-Verification-opt', [UserController::class, 'email_Verification_opt'])->name('email-Verification-opt');
+
+
+
+Route::get('my-favourite-request', [RequestController::class, 'my_favourite_request'])->name('my-favourite-request');
+
+
+
+Route::get('chat', [RequestController::class, 'chat'])->name('chat');
+
+
+
+
+Route::get('mobile-chat-message', [RequestController::class, 'mobile_chat_message'])->name('mobile-chat-message');
+
+
+
+
+Route::get('mobile-chat-profile', [RequestController::class, 'mobile_chat_profile'])->name('mobile-chat-profile');
+
+
+
+Route::get('pink-leave-review', [RequestController::class, 'pink_leave_review'])->name('pink-leave-review');
+
+
+
+
+Route::get('modify-personal-info', [RequestController::class, 'modify_personal_info'])->name('modify-personal-info');
+
+
+
+
+Route::get('change-password', [RequestController::class, 'change_password'])->name('change-password');
+
+
+
+
 
 
 

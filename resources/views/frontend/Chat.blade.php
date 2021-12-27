@@ -298,7 +298,7 @@
                         <div style="margin-left: 20px;">
                             <div class="dropdown">
                                 <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="icons/1280px-Flag_of_France.svg.png" alt="">
+                                    <img src="{{asset('theme/icons/1280px-Flag_of_France.svg.png')}}" alt="">
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     <li><a class="dropdown-item" href="#">English</a></li>
@@ -493,7 +493,7 @@
                         <div class="row mb-4">
                         </div>
                         <div class="row">
-                            <button href="LeaveReview.html" style="background: linear-gradient(to right,#ff8dad,#ff2160);background: linear-gradient(to right,#ff8dad,#ff2160);border: none;width: 200px;height: 40px;font-size: 14px;border-radius: 8px;color: white;padding: 8px 10px;"><img src="icons/whitestar.png" alt="" class="whitestar">Leave your review</button>
+                            <button href="LeaveReview.html" style="background: linear-gradient(to right,#ff8dad,#ff2160);background: linear-gradient(to right,#ff8dad,#ff2160);border: none;width: 200px;height: 40px;font-size: 14px;border-radius: 8px;color: white;padding: 8px 10px;"><img src="{{asset('theme/icons/whitestar.png')}}" alt="" class="whitestar">Leave your review</button>
 
                         </div>
                     </div>
@@ -515,7 +515,7 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="col text-center mb-3">
-                            <img src="icons/Icon ionic-md-warning.png" style="width: 3rem;">
+                            <img src="{{asset('theme/icons/Icon ionic-md-warning.png')}}" style="width: 3rem;">
                         </div>
                         <p class="MBText2 text-center mt-4">Are you sure to want to report this request ?
                         </p>
@@ -539,7 +539,7 @@
                 <div class="modal-content">
                     <div class="modal-body ReportModalBody">
                         <div class="col text-center mb-3">
-                            <img src="icons/Icon ionic-md-warning.png" style="width: 3rem;">
+                            <img src="{{asset('theme/icons/Icon ionic-md-warning.png')}}" style="width: 3rem;">
                         </div>
                         <p class="MBText2 text-center mt-4">Give a valid reason to report this user.
                         </p>

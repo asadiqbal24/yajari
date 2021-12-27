@@ -85,4 +85,36 @@ class RequestController extends Controller
     {
      return view('frontend.MyFavouritesNeighbors');     
     }
+
+    public function my_favourite_request()
+    {
+     return view('frontend.MyFavoritesRequests');  
+    }
+
+    public function chat()
+    {
+     return view('frontend.Chat');   
+    }
+    public function mobile_chat_message()
+    {
+     return view('frontend.MobileChatMessages');  
+    }
+    public function mobile_chat_profile()
+    {
+        return view('frontend.MobileChatProfile');
+    }
+
+    public function pink_leave_review()
+    {
+     return view('frontend.PinkLeaveReview');   
+    }
+
+    public function modify_personal_info()
+    {
+        return view('frontend.ModifyPersonalinfo');
+    }
+    public function change_password()
+    {
+        return view('frontend.ChangePassword');
+    }
 }

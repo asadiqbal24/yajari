@@ -272,9 +272,9 @@ textarea::placeholder{
 
 .publishnavbar {
     position: relative;
-    left: -50px;
+    left: -34px;
     text-align: center;
-    width: 60%;
+    width: 50%;
 }
 
 }
@@ -286,7 +286,20 @@ textarea::placeholder{
     position: relative;
     left: -35px;
     text-align: center;
-    width: 60%;
+    width: 56%;
+}
+
+}
+
+@media (max-width: 375px) {
+
+
+
+.publishnavbar {
+    position: relative;
+    left: -35px;
+    text-align: center;
+    width: 59%;
 }
 
 }
@@ -298,7 +311,7 @@ textarea::placeholder{
 
 .publishnavbar {
     position: relative;
-    left: -17px;
+    left: -25px;
     text-align: center;
     width: 60%;
 }

@@ -754,17 +754,6 @@ textarea::placeholder {
     padding: 1rem 7rem 3rem 7rem;
 }
 
-.background-image2 {
-    width: 65%;
-    height: 150px;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
-    top: -50px;
-    margin: 0 auto;
-}
-
 
 .PublishRequestROW {
     margin-top: 2.5rem;
