@@ -9,10 +9,10 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse" style="margin-left:6%">
                         <div class="navbar-nav">
-                            <a  style=" padding-top: 10px;color: #3B3B3B;font-weight: bold;" href="{{route('home')}}" class="nav-item nav-link active">Home</a>
-                            <a  style=" padding-top: 10px;color: #3B3B3B;font-weight: bold;" href="{{route('requests')}}" class="nav-item  requestnav">Requests</a>
-                            <a  style=" padding-top: 10px;color: #3B3B3B;font-weight: bold" href="{{route('serviceproviders')}}" class="nav-item servicesnav">Service Providers</a>
-                            <a  style=" padding-top: 10px;color: white;font-weight: bold;" href="{{route('publishrequest')}}" class="nav-item nav-link navpublish publishnavbar">Publish a Request</a>
+                            <a  style=" padding-top: 10px;color: #3B3B3B;font-weight: bold;    text-decoration: none;" href="{{route('home')}}" class="nav-item nav-link active">Home</a>
+                            <a  style=" padding-top: 10px;color: #3B3B3B;font-weight: bold;    text-decoration: none;" href="{{route('requests')}}" class="nav-item  requestnav">Requests</a>
+                            <a  style=" padding-top: 10px;color: #3B3B3B;font-weight: bold;    text-decoration: none;" href="{{route('serviceproviders')}}" class="nav-item servicesnav">Service Providers</a>
+                            <a  style=" padding-top: 10px;color: white;font-weight: bold;    text-decoration: none;" href="{{route('publishrequest')}}" class="nav-item nav-link navpublish publishnavbar">Publish a Request</a>
                         </div>
                         <div class="navbar-nav navbar2side" id="nav-Profile">
                             <div class="flex-container d-flex">
@@ -78,7 +78,9 @@
                                                                             </div>
                                                                         </div>
                                                                     </a></li>
-                                                                    <li><a class="dropdown-item" href="MyFavoritesRequests.html">
+
+                                                                    
+                                                                    <li><a class="dropdown-item" href="{{route('my-favourite-request')}}">
                                                                         <div class="row">
                                                                             <div class="col-3 col-sm-3 text-end">
                                                                                 <img src="{{asset('theme/icons/Ellipse 167.png')}}" alt="">
@@ -112,7 +114,7 @@
                                                         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                                             <div class="accordion-body" style="padding:0;">
                                                                 <ul class="ProfileDropdown" style="text-decoration: none;">
-                                                                    <li><a class="dropdown-item" href="ModifyPersonalinfo.html">
+                                                                    <li><a class="dropdown-item" href="{{route('modify-personal-info')}}">
                                                                         <div class="row">
                                                                             <div class="col-3 col-sm-3 text-end">
                                                                                 <img src="{{asset('theme/icons/Ellipse 167.png')}}" alt="">
@@ -122,7 +124,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </a></li>
-                                                                    <li><a class="dropdown-item" href="ChangePassword.html">
+                                                                    <li><a class="dropdown-item" href="{{route('change-password')}}">
                                                                         <div class="row">
                                                                             <div class="col-3 col-sm-3 text-end">
                                                                                 <img src="{{asset('theme/icons/Ellipse 167.png')}}" alt="">

@@ -1,8 +1,82 @@
 @include('frontend.layout.head')
 @section('sHome','active')
 
-<link rel="stylesheet" href="{{asset('theme/css/style.css')}}">
 <style type="text/css">
+
+
+
+    .modal-header p {
+    font-size: 14px;
+    font-weight: bolder;
+}
+.modal-body {
+    padding: 2rem 4rem 4rem 4rem;
+}
+.MBText1 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff155b;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.FCselect1 {
+    border-radius: 10px 10px 10px 10px;
+    height: 3rem;
+    background-image: url(theme/icons/ic_keyboard_arrow_right_-3.png), url(theme/icons/1280px-Flag_of_France.svg.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 0.75rem center, left 0.75rem center;
+    background-size: 13px 7px, 30px 15px;
+    padding-left: 3rem;
+}
+.LRM1Button {
+    margin: auto;
+    text-align: center;
+    height: 3rem;
+    background: linear-gradient(to right, #ff6388, #ff0b44);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+.LRMmobileB {
+    margin: auto;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 10px;
+    height: 3rem;
+    margin-bottom: 2rem;
+}
+
+.modal-footer img {
+    width: 8rem;
+    margin: auto;
+}
+
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 1px 2px 30px 1px #ff99b8;
+}
+.Model3input {
+    margin-right: 5%;
+}
+.Modal3IputDIV input {
+    height: 3rem;
+}
+
+.Modal3footer {
+    display: block;
+}
+.Modal3Ftext {
+    font-size: 14px;
+}
+.modal-footer img {
+    width: 8rem;
+    margin: auto;
+}
+
+.FCinput1 {
+    border-radius: 10px 10px 10px 10px;
+    height: 3rem;
+}
     
     .background-image {
     width: 100%;
@@ -12,6 +86,88 @@
     background-size: cover;
     position: relative;
     overflow: hidden;
+}
+
+.Modal4select1 {
+    height: 2.5rem;
+    border-radius: 10px;
+    background-position: right 1rem center;
+}
+
+.Modal4input3 {
+    height: 5rem;
+    border-radius: 10px;
+}
+
+.Modal4input1, .Modal4input2 {
+    height: 2.5rem;
+    background-image: url(icons/ic_person_-1.png);
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    background-position: right 1rem center;
+}
+
+.Modal4input1 {
+    border-radius: 9px;
+}
+.Modal4input4, .Modal4input5 {
+    height: 2.5rem;
+}
+.Modal4input4 {
+    border-radius: 9px;
+}
+.Modal4input5 {
+    background-image: url(icons/ic_person_-1.png);
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    background-position: right 1rem center;
+}
+.Modal4input4, .Modal4input5 {
+    height: 2.5rem;
+}
+.Modal4input5 {
+    border-radius: 10px 10px 0 0;
+}
+.Modal4input6 {
+    height: 2.5rem;
+    border-radius: 10px;
+    background-image: url(icons/ic_visibility_24px.png);
+    background-repeat: no-repeat;
+    background-size: 16px 12px;
+    background-position: right 1rem center;
+    border-radius: 0 0 10px 10px;
+}
+.form-check-input {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 0.2rem;
+    margin-right: 10px;
+}
+.Modal4Form-Categoryt1 {
+    font-size: 13px;
+    margin: 0;
+}
+
+.MHmodel3 {
+    justify-content: unset;
+    border-bottom: 1px solid #dee2e6;
+    --bs-gutter-x: 0;
+}
+.Modal5Body {
+    padding: 2rem 3rem 2rem 3rem;
+}
+.Modal5Img {
+    width: 9rem;
+    height: 3rem;
+    margin: auto;
+}
+.Modal5Text1 {
+    font-size: 15px;
+    text-align: center;
+}
+.Modal5Text2 {
+    font-size: 13px;
+    text-align: center;
 }
 
 

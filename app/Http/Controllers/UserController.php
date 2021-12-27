@@ -46,12 +46,23 @@ class UserController extends Controller
     {
           // dd($request);
         $token = md5(date('Y-m-d').microtime()); 
-
+         
         $this->validate($request, [
             'registerPhoneNumber' => 'required',
             'registerEmail' => 'required|email|unique:users,email',
             'registerPassword' => 'required',
         ]);
+
+
+        $token = getenv("TWILIO_AUTH_TOKEN");
+        $twilio_sid = getenv("TWILIO_SID");
+        $twilio_verify_sid = getenv("TWILIO_VERIFY_SID");
+        $twilio = new Client($twilio_sid, $token);
+        $twilio->verify->v2->services($twilio_verify_sid)
+            ->verifications
+            ->create($data['phone_number'], "sms");
+
+
     
         $input = $request->all();
         $user_id=User::insertGetId([
@@ -62,23 +73,23 @@ class UserController extends Controller
         'address'=>$request->registerAddress,
         'password'=>bcrypt($request->registerPassword),
         'siret_number' => $request->registerSiretNumber,
-
-
         'phone_number' => $request->registerPhoneNumber??NULL,
         'country' => $request->registerCountrySelect,
         'sms_code' => $request->registerFirstName,
         'email' => $request->registerEmail,
-        'remember_token' => $token,
+        'remember_token' => $token
         ]);
        
 
          $id=User::find($user_id);
         $role=DB::table('roles')->where('name','User')->first();
         $id->roles()->attach($role->id);
-
-
+        
         $email = $request->registerEmail;
+        $token=$token;
         $data = ['email'=>$email,'token'=>$token];
+
+
         Mail::send('emails.verify_mail',['data'=>$data],function($mail) use ($email){
                     $mail->to($email,'New Registration')->from("dhca@fabulousinstruments.com")->subject("New Registration Email Verification");
             });
@@ -158,5 +169,68 @@ class UserController extends Controller
         User::find($id)->delete();
         return redirect()->route('users.index')
                         ->with('success','User deleted successfully');
+    }
+
+
+     public function email_Verification_opt(Request $request)
+    {
+        //dd($request);
+
+        $email_opt = md5(date('Y-m-d').microtime());
+
+         $this->validate($request, [
+            'email' => 'required'
+        ]);
+
+
+        $email_chk=User::where('email',$request->email)->first();
+        if(!empty($email_chk)){
+
+         alert()->error('Email Must Be Unique'); 
+        return redirect()->back();
+
+        }
+
+
+        $user_id=User::insertGetId([
+            'email'=>$request->email,
+         'email_opt' => substr($email_opt, 0,6),
+        ]);
+       
+        
+        $email = $request->email;
+        $opt=substr($email_opt,0,6);
+        $data = ['email'=>$email,'opt'=>$opt];
+        Mail::send('emails.verify_opt',['data'=>$data],function($mail) use ($email){
+                    $mail->to($email,'Email Opt Verfication')->from("systems@better1.com")->subject("New Registration Email Verification");
+            });
+        alert()->success("Your Email OPT is sended. Kindly check your email.");
+
+        return redirect()->back();
+
+    }
+
+
+    protected function verify(Request $request)
+    {
+        $data = $request->validate([
+            'verification_code' => ['required', 'numeric'],
+            'phone_number' => ['required', 'string'],
+        ]);
+        /* Get credentials from .env */
+        $token = getenv("TWILIO_AUTH_TOKEN");
+        $twilio_sid = getenv("TWILIO_SID");
+        $twilio_verify_sid = getenv("TWILIO_VERIFY_SID");
+        $twilio = new Client($twilio_sid, $token);
+        $verification = $twilio->verify->v2->services($twilio_verify_sid)
+            ->verificationChecks
+            ->create($data['verification_code'], array('to' => $data['phone_number']));
+        if ($verification->valid) {
+            $user = tap(User::where('phone_number', $data['phone_number']))->update(['isVerified' => true]);
+            /* Authenticate user */
+            Auth::login($user->first());
+            return redirect()->route('home')->with(['message' => 'Phone number verified']);
+        }
+        return back()->with(['phone_number' => $data['phone_number'], 'error' => 'Invalid verification code entered!']);
     }
 }

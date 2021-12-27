@@ -1,7 +1,46 @@
-    @include('frontend.layout.head')
+    <!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="{{asset('theme/css/RecentRequestStyle.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css" rel="stylesheet" />
+    <title>ya jari</title>
+
     @section('my-request','active')
-    <link rel="stylesheet" href="{{asset('theme/css/RecentRequestStyle.css')}}">
+    
     <style type="text/css">
+
+   @media all and (min-width: 1300px) {
+
+.background-image{
+    background-image: url(theme/pictures/Group\ 12.png);
+    height: 180px;
+}
+
+
+.background-image2 {
+    width: 65%;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    top: -50px;
+    margin: 0 auto;
+        background-image: url(theme/pictures/Group\ 2382.png);
+}
+
+
+   }
+
 
     @media all and (min-width: 1440px) {
     .socialicon {
@@ -163,7 +202,7 @@
     .background-image {
     border-radius: 25px;
     width: 100%;
-    height: 165px;
+    height: 200px;
     position: relative;
     background-position: center;
     background-size: cover;

@@ -1,6 +1,23 @@
-@include('frontend.layout.head')
-@section('sRequests','active')  
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{{asset('theme/css/RequestStyle.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css" rel="stylesheet" />
+    <title>ya jari</title>
+
+@section('requestpage','active')  
         <style type="text/css">
+
         @media all and (min-width: 1300px) {
         .Realize-text1 {
         margin-left: 3.5rem;
@@ -26,6 +43,15 @@
     top: 28px;
     left: -15px;
     width: 1.3rem;
+}
+
+.navpublish {
+    padding-left: 20px;
+    background: linear-gradient(to right,#ffacbf,#fa4d75);
+    color: white;
+    border-radius: 20px;
+    align-items: center;
+    padding-top: 10px;
 }
 
         }
@@ -1785,405 +1811,31 @@
     </section>
 
     <!--Modal-->
-    <div class="modal fade" id="LoginRegisterModal1" tabindex="-1" aria-labelledby="LoginRegisterModal1Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header" style="justify-content: center;">
-                    <p class="modal-title" id="LoginRegisterModal1Label">Login or registration</p>
-                </div>
-                <div class="modal-body">
-                    <p style="text-align: center;font-size: 13px;font-weight: bold;color: #ff155b;"><b>Welcome to Ya jari</b></p>
-                    <div class="form-group">
-                        <select id="Select" class="FCselect1 form-select">
-                            <option>
-                                France (+33)
-                            </option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-group mb-3">
-                            <input type="text" class="FCinput1 form-control" placeholder="Telephone Number" aria-label="Telephone Number" aria-describedby="basic-addon1">
-                        </div>
-                    </div>
-                    <div class="LRM1Button row">
-                        <a role="button" data-bs-target="#LoginRegisterModal3" data-bs-toggle="modal" data-bs-dismiss="modal">
-                            <p style="color: white;position: relative;top:12px;">Continue</p>
-                        </a>
-                    </div>
-                    <div class="row d-flex">
-                        <div class="col">
-                            <hr>
-                        </div>
-                        <div class="col-1 text-center">
-                            <p class="OrText">Or</p>
-                        </div>
-                        <div class="col">
-                            <hr>
-                        </div>
-                    </div>
-                    <div class="LRMmobileB row">
-                        <div class="col-3">
-                            <img src="{{asset('theme/icons/ic_mail_outline_24pxblack.png')}}" style="padding-top: 0.9rem;">
-                        </div>
-                        <div class="col-9">
-                            <a role="button" data-bs-target="#LoginRegisterModal2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                <p style="position: relative;top: 12px;">Continue with Email</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer" style="margin: auto;border: none;">
-                    <div class="row">
-                        <img src="{{asset('theme/icons/yajari-removebg-preview.png')}}">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <!--Model2-->
-    <div class="modal fade" id="LoginRegisterModal2" tabindex="-1" aria-labelledby="LoginRegisterModal2Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header" style="justify-content:center;">
-                    <p class="modal-title" id="LoginRegisterModal2Label">Login or registration</p>
-                </div>
-                <div class="modal-body">
-                    <p class="MBText1"><b>Welcome to Ya jari</b></p>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" style="height: 3rem;
-                                border-radius: 10px;" placeholder="Email Address" aria-label="Email Address" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="LRM1Button row">
-                        <a role="button" data-bs-target="#LoginRegisterModal4" data-bs-toggle="modal" data-bs-dismiss="modal">
-                            <p style="color: white;position: relative;top: 12px;">Continue</p>
-                        </a>
-                    </div>
-                    <div class="row d-flex mb-3">
-                        <div class="col">
-                            <hr>
-                        </div>
-                        <div class="col-1 text-center">
-                            <p class="OrText">Or</p>
-                        </div>
-                        <div class="col">
-                            <hr>
-                        </div>
-                    </div>
-                    <div class="LRMmobileB LRMmobileB1 row">
-                        <div class="col-3">
-                            <img src="{{asset('theme/icons/ic_phonelink_lock_24pxBlack.png')}}" style="position:relative;top: 12px;">
-                        </div>
-                        <div class="col-9">
-                            <a role="button" data-bs-target="#LoginRegisterModal1" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                <p style="position: relative;top: 12px;"> Continue with Mobile</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer" style="margin: auto;border: none;">
-                    <div class="row">
-                        <img src="{{asset('theme/icons/yajari-removebg-preview.png')}}">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <!--Model3-->
-    <section>
-        <div class="modal fade" id="LoginRegisterModal3" data-bs-keyboard="false" tabindex="-1" aria-labelledby="LoginRegisterModal3Label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="MHmodel3 modal-header row">
-                        <div class="col-3 col-sm-3">
-                            <button type="button" data-bs-dismiss="modal" aria-label="Close" style="background-color: white;border: none;">
-                                <img class="model-img1" src="{{asset('theme/icons/ic_keyboard_arrow_right_24Blackpx.png')}}">
-                            </button>
-                        </div>
-                        <div class="col-9 col-sm-9">
-                            <p class="text-start" style="font-size: 14px;
-                                            font-weight: bolder;    position: relative;
-                                        top: 10px;" id="LoginRegisterModal3Label">Conform Telephone Number</p>
-                        </div>
-                    </div>
-                    <div class="Modal3Body modal-body">
-                        <p style="font-size: 14px;
-                                    text-align: center;">Enter the code sent to your Telephone number through SMS </p>
-                        <div class="Modal3IputDIV d-flex">
-                            <input type="text" class="Model3input form-control" placeholder="  1" aria-label="1">
-                            <input type="text" class="Model3input form-control" placeholder=" 2" aria-label="2">
-                            <input type="text" class="Model3input form-control" placeholder=" 3" aria-label="3">
-                            <input type="text" class="Model3input form-control" placeholder=" 4" aria-label="4">
-                            <input type="text" class="Model3input form-control" placeholder=" 5" aria-label="5">
-                            <input type="text" class="form-control" placeholder="6" aria-label="  6">
-                        </div>
-                    </div>
-                    <div class="Modal3footer modal-footer">
-                        <div class="row">
-                            <div class="col-8 col-sm-7 text-end">
-                                <p class="Modal3Ftext">Did not receive any code?</p>
-                            </div>
-                            <div class="col-4 col-sm-5">
-                                <a role="button" data-bs-target="#LoginRegisterModal4" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                    <p class="Modal3Ftext"><b>Send again</b></p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <img class="MFImg" src="{{asset('theme/icons/yajari-removebg-preview.png')}}">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     <!--Model4-->
-    <section>
-        <div class="modal fade" id="LoginRegisterModal4" data-bs-keyboard="false" tabindex="-1" aria-labelledby="LoginRegisterModal4Label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="MHmodel3 modal-header row">
-                        <div class="col-3 col-sm-4">
-                            <button type="button" data-bs-dismiss="modal" aria-label="Close" style="background-color: white;border: none;">
-                                <img class="model-img1" src="{{asset('theme/icons/ic_keyboard_arrow_right_24Blackpx.png')}}">
-                            </button>
-                        </div>
-                        <div class="col-9 col-sm-8">
-                            <p class="modal-title text-startt" id="LoginRegisterModal4Label">Login or registration</p>
-                        </div>
-                    </div>
-                    <div class="Modal4Body modal-bodylogin">
-                        <p class="MBText1"><b>Welcome to Yajari</b></p>
-                        <div class="input-group mb-2">
-                            <select class="Modal4select1 form-select form-select-sm purpose" aria-label="Default select example" style="font-size:12px;">
-                                <option value="{{Null}}">Choose</option>
-                                <option value="1">Professional</option>
-                                <option value="2">Private</option>
-                            </select>
-                        </div>
-                        <div class="input-group mb-2">
-                            <input type="text" style="display:none;height: 2.5rem;
-                                        background-image: url(icons/ic_person_-1.png);
-                                        background-repeat: no-repeat;
-                                        background-size: 12px 12px;
-                                        background-position: right 2rem center;
-                                        font-size: 12px;
-                                        border-radius: 10px 10px 0 0;" class="Modal4input1 form-control private" placeholder="First Name" aria-label="First Name" aria-describedby="basic-addon1">
-                        </div>
-                        <div class="input-group mb-2">
-                            <input type="text" style="display:none;    height: 2.5rem;
-                                        background-image: url(icons/ic_person_-1.png);
-                                        background-repeat: no-repeat;
-                                        background-size: 12px 12px;
-                                        background-position: right 2rem center;
-                                        font-size: 12px;border-radius: 0 0 10px 10px;" class="Modal4input2 form-control private" placeholder="Last Name" aria-label="Last Name" aria-describedby="basic-addon1">
-                        </div>
-                        <div class="input-group mb-2">
-                            <input type="text" style="display:none;height: 2.5rem;
-                                        background-image: url(icons/ic_person_-1.png);
-                                        background-repeat: no-repeat;
-                                        background-size: 12px 12px;
-                                        border-radius: 10px 10px 0 0;
-                                        background-position: right 2rem center;font-size: 12px;" class=" form-control professional" placeholder="Company Name" aria-label="Company Name" aria-describedby="basic-addon1">
-                        </div>
-
-                        <div class="input-group mb-2">
-                            <input type="text" class="Modal4input3 form-control" placeholder="Address" aria-label="Address" aria-describedby="basic-addon1">
-                        </div>
-
-                        <div class="input-group mb-2">
-                            <input type="text" style="display:none;border-radius: 10px 10px 0 0;font-size: 12px;" class="Modal4input4 form-control professional" placeholder="SIRET Number" aria-label="SIRET Number" aria-describedby="basic-addon1">
-                        </div>
-                        <div class="input-group mb-2">
-                            <input type="text" class="Modal4input5 form-control" placeholder="Phone Number" aria-label="Phone Number" aria-describedby="basic-addon1">
-                        </div>
-                        <div class="input-group mb-2">
-                            <input type="text" class="Modal4input6 form-control" placeholder="Password" aria-label="password" aria-describedby="basic-addon1">
-                        </div>
-                        <div class="">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="FieldsetCheck" style="height: 1.2rem;">
-                                <label class="form-check-label" for="FieldsetCheck">
-                                    <p class="Modal4Form-Categoryt1" style="padding-top: 0.2rem;">I accept <a style="color: #F82268;text-decoration: none;" href="">general terms and conditions.</a> </p>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="pt-1 mb-2">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="FieldsetCheck" style="height: 1.2rem;">
-                                <label class="form-check-label" for="FieldsetCheck">
-                                    <p class="Modal4Form-Categoryt1" style="padding-top: 0.2rem;">Receive information from our partners.</p>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="LRM1Button row" style="margin-bottom: 0.2rem;">
-                            <a role="button" data-bs-target="#LoginRegisterModal5" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                <p style="color: white;position: relative;
-                                            top: 13px;">Continue</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="Modal4footer modal-footer">
-                        <div class="row" style="margin: auto;">
-                            <img class="MFImg" src="{{asset('theme/icons/yajari-removebg-preview.png')}}">
-}}                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     <!--Model5-->
-    <section>
-        <div class="modal fade" id="LoginRegisterModal5" data-bs-keyboard="false" tabindex="-1" aria-labelledby="LoginRegisterModal5Label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="MHmodel3 modal-header row">
-                        <div class="col-3 col-sm-4">
-                            <button type="button" data-bs-dismiss="modal" aria-label="Close" style="background-color: white;border: none;">
-                                <img class="model-img1" src="{{asset('theme/icons/ic_keyboard_arrow_right_24Blackpx.png')}}">
-                            </button>
-                        </div>
-                        <div class="col-9 col-sm-8">
-                            <p class="modal-title text-startt" id="LoginRegisterModal5Label">Create your profile</p>
-                        </div>
-                    </div>
-                    <div class="Modal5Body modal-body">
-                        <div class="row" style="margin: auto;">
-                            <img class="Modal5Img" src="{{asset('theme/icons/yajari-removebg-preview.png')}}">
-                        </div>
-                        <p class="Modal5Text1 pt-1"><b>Welcome to Yajari</b></p>
-                        <p class="Modal5Text2">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document </p>
-                        <div class="LRM1Button row" style="margin-bottom: 0.2rem;">
-                            <a role="button" data-bs-target="#LoginRegisterModal6" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                <p style="color: white;position: relative;top: 12px;">Continue</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!--Model6-->
-    <div class="modal fade" id="LoginRegisterModal6" tabindex="-1" aria-labelledby="LoginRegisterModal6Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content" style="border-radius:20px;">
-                <div class="modal-header" style="justify-content: center;">
-                    <p class="modal-title" id="LoginRegisterModal6Label">Create your profile</p>
-                </div>
-                <div class="Modal6Body">
-                    <p class="Modal6Text1"><b>Welcome to Ya jari</b></p>
-                    <div>
-                        <select id="Select" class="FCselect1 form-select">
-                            <option>
-                                France (+33)
-                            </option>
-                        </select>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="text" class="FCinput1 form-control" placeholder="Telephone Number" aria-label="Telephone Number" aria-describedby="basic-addon1">
-                    </div>
-                    <p class="Modal6Text2">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document</p>
-                    <div class="pt-1 mb-2">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="FieldsetCheck" style="height: 1.2rem;">
-                            <label class="form-check-label" for="FieldsetCheck">
-                                <p class="Modal6Text3" style="padding-top: 0.2rem;">Send Code Through SMS</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="LRM1Button row">
-                        <a role="button" data-bs-target="#LoginRegisterModal7" data-bs-toggle="modal" data-bs-dismiss="modal">
-                            <p style="color: white;position: relative;top: 13px;">Continue</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="modal-footer" style="margin: auto;border: none;">
-                    <div class="row">
-                        <img src="{{asset('theme/icons/yajari-removebg-preview.png')}}">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <!--Model7-->
-    <div class="modal fade" id="LoginRegisterModal7" tabindex="-1" aria-labelledby="LoginRegisterModal7Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header" style="justify-content: center;">
-                    <p class="modal-title" id="LoginRegisterModal7Label">Create your profile</p>
-                </div>
-                <div class="Modal7Body">
-                    <p class=" text-center" style="font-size: 14px;"><b>Check your email</b></p>
-                    <div class="input-group mb-3">
-                        <input type="text" style="border-radius: 10px;
-                                    height: 3rem;" class="form-control" placeholder="Example@email.com" aria-label="Example@email.com" aria-describedby="basic-addon1">
-                    </div>
-                    <p class="Modal6Text2 mb-5">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document</p>
-                    <div class="LRM1Button row" style="margin: auto;">
-                        <a role="button" href="ChoseCategory.html" style="text-decoration:none;">
-                            <p style="color: white;font-size: 13px;position: relative;
-                                        top: 15px;">Continue</p>
-                        </a>
-                    </div>
-                    <div class="row" style="margin: auto;">
-                        <a role="button" data-bs-target="#LoginRegisterModal2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                            <p class="text-center pt-2" style="font-size: 12px;"><b>Update Email</b></p>
-                        </a>
-                    </div>
-                </div>
-                <div class="modal-footer" style="margin: auto;border: none;">
-                    <div class="row">
-                        <img src="{{asset('theme/icons/yajari-removebg-preview.png')}}">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <!--Modal8-->
-    <div class="modal fade" id="LoginRegisterModal8" tabindex="-1" aria-labelledby="LoginRegisterModal8Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header" style="justify-content: center;">
-                    <p class="modal-title" id="LoginRegisterModal8Label">Sign In</p>
-                </div>
-                <div class="modal-bodysignin" style="padding-top: 1rem;">
-                    <p class="MBText1"><b>Welcome to Ya jari</b></p>
-
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Telephone Number or Email Address" style="height: 3rem;border-radius: 10px 10px 10px 10px;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="mb-3">
-                            <div class="form-group">
-                                <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password" style="height: 3rem;border-radius: 10px 10px 10px 10px;">
-                                <div class="input-group-addon">
-                                    <a href=""><img class="passwordEye" src="{{asset('theme/icons/ic_visibility_off_24px.png')}}" style="position:relative; top: -2.2rem;left: 85%;width: 1.2rem;"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="LRM1Button row">
-                        <a role="button" data-bs-target="#LoginRegisterModal3" data-bs-toggle="modal" data-bs-dismiss="modal">
-                            <p style="color: white;    position: relative;
-                                        top: 10px;">Continue</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="modal-footer" style="margin: auto;border: none;">
-                    <div class="row">
-                        <img src="{{asset('theme/icons/yajari-removebg-preview.png')}}" style="width: 8rem;margin: 0px;">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <!--Footer-->
     @include('frontend.layout.footer')
+    @include('frontend.modals.registerModal1')
+    @include('frontend.modals.registerModal2')
+    @include('frontend.modals.registerModal3')
+    @include('frontend.modals.registerModal4')
+    @include('frontend.modals.registerModal5')
+    @include('frontend.modals.registerModal6')
+    @include('frontend.modals.registerModal7')
+    @include('frontend.modals.signinModal')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
