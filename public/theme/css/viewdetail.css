@@ -108,9 +108,9 @@ body {
 
 .background-image {
     width: 100%;
-    height: 200px;
+    height: 180px;
     border-radius: 2%;
-    background-image: url(pictures/Group\ 12.png);
+    
     background-position: center;
     background-size: cover;
     position: relative;
@@ -563,7 +563,7 @@ body {
     }
 
     .CRButton1 p {
-        padding-top: 0.4rem;
+        padding-top: 0.6rem;
         font-size: 13px;
         font-weight: normal;
     }
@@ -573,6 +573,10 @@ body {
         font-size: 13px;
         font-weight: normal;
     }
+    .showcase-text1 {
+    
+    padding-top: 4rem!important;
+}
 
     .CRButton2 a {
         font-size: 12px;
@@ -665,10 +669,25 @@ body {
     }
 
     .background-image {
-
-        position: relative;
-        top: 16px;
+    position: relative;
+    top: 33px;
+    height: 170px;
     }
+    .requestnav {
+       padding-left: 0px!important;    
+    text-decoration: none;
+}
+.servicesnav {
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+    text-decoration: none;
+}
+
+.publishnavbar {
+    width: 25%;
+    text-align: center;
+    margin-left: -29px;
+}
 
     .CRButton6 {
         display: block;
@@ -1105,7 +1124,7 @@ body {
     .showcase-text1 {
         font-size: 23px;
         font-weight: 900;
-        padding-top: 2.9rem;
+        padding-top: 2.9rem!important;
     }
 
     .CRButton2 {
@@ -1195,14 +1214,15 @@ body {
     }
 
     .backgroundimage {
-        width: 95%;
-        height: 130px;
-        border-radius: 7%;
-        background-position: center;
-        background-size: cover;
-        position: relative;
-        left: 16px;
-        overflow: hidden;
+        width: 100%;
+    height: 130px;
+    border-radius: 7%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    left: 5px;
+    overflow: hidden;
+    top: 16px;
     }
 
     .cardtop {
@@ -1413,6 +1433,12 @@ body {
         padding-top: 3px;
     }
 
+    .CRButton1 p {
+    padding-top: 0.5rem;
+    font-size: 13px;
+    font-weight: normal;
+}
+
 
     .CRButton6 {
         display: block;
@@ -1460,6 +1486,17 @@ body {
         left: -168px;
         top: 57px;
     }
+    .CRButton6 {
+    display: block;
+    width: 6rem;
+    height: 2.5rem;
+    text-align: center;
+    background: linear-gradient(to right, #ff6d99, #fd0d55);
+    border-radius: 6px;
+    padding-top: 12px;
+    font-size: 13px;
+    color: white;
+}
 
     .requestparagraph {
         font-size: 10px;
@@ -1515,6 +1552,14 @@ body {
         top: -79px;
         left: 254px;
     }
+
+
+.CRButton1 p {
+    padding-top: 0.3rem;
+    font-size: 13px;
+    font-weight: normal;
+}
+
 
     .maptop320 {
         position: relative;

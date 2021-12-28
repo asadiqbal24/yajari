@@ -737,6 +737,12 @@ input[type=range]::-webkit-slider-runnable-track {
         padding-right: .5rem;
     }
 
+    .MPItext1 {
+    font-size: 30px;
+    font-weight: bolder;
+    padding-top: 10px;
+}
+
     .ahre {
         padding-left: 2rem;
     }
@@ -773,6 +779,13 @@ input[type=range]::-webkit-slider-runnable-track {
         padding-top: 10px;
     }
 
+}
+
+
+
+.MPItext1 {
+    font-size: 30px;
+    font-weight: bolder;
 }
 
 
@@ -856,7 +869,7 @@ input[type=range]::-webkit-slider-runnable-track {
     }
 
     .background-image {
-        background-image: url(pictures/Group\ 3.png);
+        background-image: url(theme/pictures/Group\ 3.png);
         width: 95%;
         height: 130px;
         border-radius: 7%;
@@ -1095,7 +1108,7 @@ input[type=range]::-webkit-slider-runnable-track {
 .background-image {
     width: 100%;
     height: 140px;
-    background-image: url(pictures/Group\ 3.png);
+    background-image: url(theme/pictures/Group\ 3.png);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -1109,7 +1122,7 @@ input[type=range]::-webkit-slider-runnable-track {
     .background-image {
         width: 100%;
         height: 160px;
-        background-image: url(pictures/Group\ 3.png);
+        background-image: url(theme/pictures/Group\ 3.png);
         background-position: center;
         background-size: cover;
         position: relative;

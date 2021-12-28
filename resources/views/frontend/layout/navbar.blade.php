@@ -9,10 +9,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse" style="margin-left:6%">
                 <div class="navbar-nav">
-                    <a style=" padding-top: 10px;color: #ff6e9a;font-weight: bold;" href="{{route('home')}}" class="nav-item nav-link @yield('sHome')">Home</a>
-                    <a style=" padding-top: 10px;color: #3B3B3B;font-weight: bold;" href="{{route('requests')}}" class="nav-item  requestnav @yield('sRequests')">Requests</a>
-                    <a style=" padding-top: 10px;color: #3B3B3B;font-weight: bold" href="{{route('serviceproviders')}}" class="nav-item servicesnav @yield('sServiceProviders')">Service Providers</a>
-                    <a style=" padding-top: 10px;color: white;font-weight: bold;" href="{{route('publishrequest')}}" class="nav-item nav-link navpublish publishnavbar @yield('sPublishRequest')">Publish a Request</a>
+                    <a style=" padding-top: 10px;color: #ff6e9a;font-weight: bold;text-decoration: none;" href="{{route('home')}}" class="nav-item nav-link @yield('sHome')">Home</a>
+                    <a style=" padding-top: 10px;color: #3B3B3B;font-weight: bold;text-decoration: none;" href="{{route('requests')}}" class="nav-item  requestnav @yield('sRequests')">Requests</a>
+                    <a style=" padding-top: 10px;color: #3B3B3B;font-weight: bold;text-decoration: none;" href="{{route('serviceproviders')}}" class="nav-item servicesnav @yield('sServiceProviders')">Service Providers</a>
+                    <a style=" padding-top: 10px;color: white;font-weight: bold;text-decoration: none;" href="{{route('publishrequest')}}" class="nav-item nav-link navpublish publishnavbar @yield('sPublishRequest')">Publish a Request</a>
                 </div>
                 @if(Auth::check())
                 <div class="navbar-nav ms-auto">
