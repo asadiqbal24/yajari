@@ -58,7 +58,8 @@ Route::get('professionalProfile', function () {
 // Auth::routes();
 
 
-Route::post('/userRegister', [UserController::class, 'userRegister'])->name('userRegister');  
+Route::post('/userRegister', [UserController::class, 'userRegister'])->name('userRegister'); 
+ 
 Route::post('/userLogin', [AuthController::class, 'userLogin'])->name('userLogin');  
 Route::get('/userDashboard', [HomeController::class, 'userDashboard'])->name('userDashboard');
 
@@ -131,9 +132,24 @@ Route::get('modify-personal-info', [RequestController::class, 'modify_personal_i
 
 Route::get('change-password', [RequestController::class, 'change_password'])->name('change-password');
 
+Route::get('modify-categories', [RequestController::class, 'modify_categories'])->name('modify-categories');
 
 
 
+Route::get('modify-categories-edit', [RequestController::class, 'modify_categories_edit'])->name('modify-categories-edit');
+
+
+
+Route::get('modify-distance', [RequestController::class, 'modify_distance'])->name('modify-distance');
+
+
+
+Route::get('change-language', [RequestController::class, 'change_language'])->name('change-language');
+
+
+
+
+Route::get('view-detail', [RequestController::class, 'view_detail'])->name('view-detail');
 
 
 

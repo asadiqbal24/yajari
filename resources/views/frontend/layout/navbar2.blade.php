@@ -134,7 +134,8 @@
                                                                             </div>
                                                                         </div>
                                                                     </a></li>
-                                                                    <li><a class="dropdown-item" href="ModifyCategories.html">
+                                                                    
+                                                                    <li><a class="dropdown-item" href="{{route('modify-categories')}}">
                                                                         <div class="row">
                                                                             <div class="col-3 col-sm-3 text-end">
                                                                                 <img src="{{asset('theme/icons/Ellipse 167.png')}}" alt="">
@@ -144,7 +145,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </a></li>
-                                                                    <li><a class="dropdown-item" href="ModifyDistance.html">
+                                                                    <li><a class="dropdown-item" href="{{route('modify-distance')}}">
                                                                         <div class="row">
                                                                             <div class="col-3 col-sm-3 text-end">
                                                                                 <img src="{{asset('theme/icons/Ellipse 167.png')}}" alt="">
@@ -154,7 +155,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </a></li>
-                                                                    <li><a class="dropdown-item" href="ChangeLanguage.html">
+                                                                    <li><a class="dropdown-item" href="{{route('change-language')}}">
                                                                         <div class="row">
                                                                             <div class="col-3 col-sm-3 text-end">
                                                                                 <img src="{{asset('theme/icons/Ellipse 167.png')}}" alt="">

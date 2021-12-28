@@ -197,17 +197,19 @@
         }
         }
         .background-image {
-        width: 100%;
-        height: 138px;
-        background-image: url(theme/pictures/Group\ 3.png);
-        background-position: center;
-        background-size: cover;
-        position: relative;
-        overflow: hidden;
-        border-radius: 30px;
-        padding-top: 2.5rem;
-        margin: auto;
+     width: 128%;
+    height: 150px;
+    background-image: url(pictures/Group\ 3.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    padding-top: 2.5rem;
+    left: -140px;
+
         }
+
         .follow-img {
         width: 4rem;
         }

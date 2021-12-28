@@ -117,4 +117,28 @@ class RequestController extends Controller
     {
         return view('frontend.ChangePassword');
     }
+
+    public function modify_categories()
+    {
+     return view('frontend.ModifyCategories');   
+      
+    }
+    public function modify_categories_edit()
+    {
+        return view('frontend.ModifyCategoryEdit');
+    }
+    public function modify_distance()
+    {
+        return view('frontend.ModifyDistance');
+    }
+
+    public function change_language()
+    {
+        return view('frontend.ChangePassword');
+    }
+
+    public function view_detail()
+    {
+     return view('frontend.viewdetails');   
+    }
 }
