@@ -7,6 +7,7 @@ use App\Http\Controllers\UserChatController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\EmailVerficationController;
 use App\Http\Controllers\RequestController;
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -160,3 +161,90 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('users', UserController::class);
     Route::resource('products', ProductController::class);
 });
+
+
+
+
+
+Route::group(['prefix' => 'admin',  'middleware' => ['can:admin']], function()
+{
+
+
+    Route::get('admin-home', [AdminController::class, 'admin_home'])->name('admin-home');
+
+   Route::get('category-list', [AdminController::class, 'category_list'])->name('category-list');
+
+Route::get('admin-add-new-category', [AdminController::class, 'admin_add_new_category'])->name('admin-add-new-category');
+
+
+Route::post('admin-category-save', [AdminController::class, 'admin_category_save'])->name('admin-category-save');
+
+
+
+Route::get('admin-category-edit/{id}', [AdminController::class, 'admin_category_edit'])->name('admin-category-edit');
+
+
+
+
+Route::post('admin-category-update', [AdminController::class, 'admin_category_update'])->name('admin-category-update');
+
+
+
+Route::get('admin-category-delete/{id}', [AdminController::class, 'admin_category_delete'])->name('admin-category-delete');
+
+
+
+Route::get('sub-category-list', [AdminController::class, 'sub_category_list'])->name('sub-category-list');
+
+
+
+
+Route::get('add-new-subcategory', [AdminController::class, 'add_new_subcategory'])->name('add-new-subcategory');
+
+
+
+
+Route::post('admin-subcategory-save', [AdminController::class, 'admin_subcategory_save'])->name('admin-subcategory-save');
+
+
+
+Route::get('admin-subcategory-edit/{id}', [AdminController::class, 'admin_subcategory_edit'])->name('admin-subcategory-edit');
+
+Route::post('admin-subcategory-update', [AdminController::class, 'admin_subcategory_update'])->name('admin-subcategory-update');
+
+
+
+Route::get('admin-subcategory-delete/{id}', [AdminController::class, 'admin_subcategory_delete'])->name('admin-subcategory-delete');
+
+
+
+Route::get('user-list', [AdminController::class, 'user_list'])->name('user-list');
+
+
+
+
+Route::get('admin-add-new-user', [AdminController::class, 'admin_add_new_user'])->name('admin-add-new-user');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+    });
+
+

@@ -41,10 +41,5 @@ class AuthServiceProvider extends ServiceProvider
                 return $user->hasAccess(['user']);
             });
 
-
-             
-              
-
-
         }
 }
