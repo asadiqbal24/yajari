@@ -41,7 +41,7 @@ class AuthController extends Controller
             return redirect()->back()->with('danger','Username & Password combination doesn\'t not match');
         }   
 
-           dd(Auth::user());
+     
 
    
         if(Auth::user()->hasAccess(['admin'])){
