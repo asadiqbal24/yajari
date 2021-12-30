@@ -176,8 +176,10 @@
                 <!--Form-->
                 <section class="py-5 cardtopsection">
                     <div class="Form-Container container">
+                        @if(Auth::check())
                         <form action="{{route('confirm-publish-save')}}" method="Post" enctype="multipart/form-data">
                             @csrf
+                            @endif
                             <div class="row">
                                 <label for="Select" class="form-label">
                                     <p class="Form-Categoryt1">Request Title</p>
@@ -193,7 +195,9 @@
                                 <div class="col-sm-6 col-12 pb-3">
                                     <select id="Select" name="category" class="form-select">
                                         <option value="{{Null}}">Choose</option>
-                                        <option value="Abc">Category</option>
+                                        @foreach($category as $c)
+                                        <option value="{{$c->id}}">{{$c->name}}</option>
+                                        @endforeach()
                                     </select>
                                 </div>
                                 <div class="col-sm-6 col-12">
@@ -211,6 +215,8 @@
                                     <select id="Select" class="form-select">
                                         <option value="{{Null}}">Choose</option>
                                         <option value="Per Hour">Per Hour</option>
+                                        <option value="Weekly">Weekly</option>
+                                        <option value="Monthly">Montly</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-6 col-12">
@@ -230,7 +236,7 @@
                             </div>
                             <div class="pt-3">
                                 <div class="form-check">
-                                    <input class="form-check-input" name="urgent" value="on" type="checkbox" id="FieldsetCheck">
+                                    <input class="form-check-input" name="urgent" value="Urgent" type="checkbox" id="FieldsetCheck">
                                     <label class="form-check-label" for="FieldsetCheck">
                                         <p class="Form-Categoryt1" style="padding-top: 0.2rem;">Urgent?</p>
                                     </label>
@@ -238,7 +244,7 @@
                             </div>
                             <div class="pt-3">
                                 <div class="form-check">
-                                    <input class="form-check-input" name="professional" value="on" type="checkbox" id="FieldsetCheck">
+                                    <input class="form-check-input" name="professional" value="1" type="checkbox" id="FieldsetCheck">
                                     <label class="form-check-label" for="FieldsetCheck">
                                         <p class="Form-Categoryt1" style="padding-top: 0.2rem;">Only Professional?</p>
                                     </label>
@@ -246,7 +252,7 @@
                             </div>
                             <div class="pt-3">
                                 <div class="form-check">
-                                    <input class="form-check-input" name="phone_number" value="on" type="checkbox" id="FieldsetCheck">
+                                    <input class="form-check-input" name="phone_number" value="1" type="checkbox" id="FieldsetCheck">
                                     <label class="form-check-label" for="FieldsetCheck">
                                         <p class="Form-Categoryt1" style="padding-top: 0.2rem;">Show Phone Number</p>
                                     </label>

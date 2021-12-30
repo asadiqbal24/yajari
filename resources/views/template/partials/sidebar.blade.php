@@ -36,6 +36,9 @@
 
             <li><a class="nav-link" href="{{route('user-list')}}"><i class="fas fa-home"></i><span>User</span></a></li>
             
+            <li><a class="nav-link" href="{{route('publish-request-list')}}"><i class="fas fa-home"></i><span>Publish Request </span></a></li>
+
+            <li><a class="nav-link" href="{{route('logout')}}"><i class="fas fa-home"></i><span>Logout </span></a></li>
             
           </ul>
         </aside>
