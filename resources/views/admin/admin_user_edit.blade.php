@@ -92,31 +92,33 @@ button:hover {
         @endif
 
 
-<form id="regForm" method="POST" action="{{route('admin-user-save')}}" enctype="multipart/form-data">
+<form id="regForm" method="POST" action="{{route('admin-user-update')}}" enctype="multipart/form-data">
   @csrf
+  <input type="hidden" name="id" value="{{$edit->id}}">
   <h4 style="text-align:center">Login or registration:</h4>
   <!-- One "tab" for each step in the form: -->
   <div class="tab">Email:
-    <p><input placeholder="Email" oninput="this.className = ''" name="email"></p>
+    <p><input placeholder="Email" value="{{$edit->email}}" name="email"></p>
     
   </div>
   <div class="tab">Registration Info:
     <p><select class="form-control purpose" name="registration_type">
       <option value="{{Null}}">Choose</option>
-      <option value="1">Professional</option>
+      <option value="1" >Professional</option>
       <option value="2">Private</option>
       
     </select></p>
-    <p><input class="private" style="display:none" placeholder="First Name..."  name="fname"></p>
-    <p><input class="private" style="display:none" placeholder="Last Name ..."  name="lname"></p>
-    <p><input class="professional" style="display:none" placeholder="Company Name..."  name="company_name"></p>
-    <p><input class="professional" style="display:none" placeholder="Siert Number ..."  name="siert_number"></p>
-    <p><input placeholder="Phone..." name="phone"></p>
-    <p><input placeholder="Address..."  name="address"></p>
-    <p><input type="password" placeholder="Password..."  name="password"></p>
+
+    <p><input class="private" value="{{$edit->first_name}}" style="display:none" placeholder="First Name..."  name="fname"></p>
+    <p><input class="private" value="{{$edit->last_name}}" style="display:none" placeholder="Last Name ..."  name="lname"></p>
+    <p><input class="professional" value="{{$edit->company_name}}" style="display:none" placeholder="Company Name..."  name="company_name"></p>
+    <p><input class="professional" value="{{$edit->siret_number}}" style="display:none" placeholder="Siert Number ..."  name="siert_number"></p>
+    <p><input value="{{$edit->phone_number}}" placeholder="Phone..." name="phone"></p>
+    <p><input value="{{$edit->address}}" placeholder="Address..."  name="address"></p>
+    <p><input  type="password" placeholder="Password..."  name="password"></p>
   </div>
   <div class="tab">Date of Birth:
-    <p><input type="Date" placeholder="Date Of Birth"  name="dob"></p>
+    <p><input value="{{$edit->dob}}" type="Date" placeholder="Date Of Birth"  name="dob"></p>
     <p><input type="file" placeholder="Upload Image"  name="image"></p>
     
   </div>
@@ -124,7 +126,7 @@ button:hover {
     <div class="row" style="
     margin-top: 20px;">
       <div class="col-1">
-       <input type="checkbox" name="term_condition" value="1" style="width: 1.5rem;
+       <input type="checkbox" checked name="term_condition" value="1" style="width: 1.5rem;
     height: 1rem;
     margin-top: 5px;">  
       </div>
@@ -137,7 +139,7 @@ button:hover {
     <div class="row" style="
     margin-top: 10px;">
       <div class="col-1">
-       <input type="checkbox" name="receive_information" value="1" style="width: 1.5rem;
+       <input type="checkbox" checked name="receive_information" value="1" style="width: 1.5rem;
     height: 1rem;
     margin-top: 5px;">  
       </div>

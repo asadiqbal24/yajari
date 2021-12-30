@@ -18,10 +18,7 @@ class RequestController extends Controller
             'price' => 'required',
             'position' => 'required',
             'description' => 'required',
-            'urgent' => 'required',
-            'professional' => 'required',
-            'phone_number' => 'required',
-            
+            'file'=>'required',
             ]);
          if ($request->hasFile('file')) 
                     {

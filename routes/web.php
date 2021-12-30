@@ -8,6 +8,10 @@ use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\EmailVerficationController;
 use App\Http\Controllers\RequestController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PublishRequestController;
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,9 +41,7 @@ Route::get('serviceprovider', function () {
     return view('frontend.ServiceProviders');
 })->name('serviceproviders');
  
-Route::get('publishrequest', function () {
-    return view('frontend.PublishRequest');
-})->name('publishrequest');  
+
 
 Route::get('realizeYourProject', function () {
     return view('frontend.realizeYourProject');
@@ -65,6 +67,10 @@ Route::post('/userLogin', [AuthController::class, 'userLogin'])->name('userLogin
 Route::get('/userDashboard', [HomeController::class, 'userDashboard'])->name('userDashboard');
 
 Route::get('user-chat', [UserChatController::class, 'user_chat'])->name('user-chat');
+ 
+
+
+Route::get('publishrequest', [PublishRequestController::class, 'publishrequest'])->name('publishrequest');
  
 
 
@@ -165,6 +171,21 @@ Route::group(['middleware' => ['auth']], function() {
 
 
 
+Route::group(['prefix' => 'user',  'middleware' => ['can:user']], function()
+{
+
+
+ Route::post('user-confirm-publish-save', [RequestController::class, 'user_confirm_publish_save'])->name('user-confirm-publish-save');
+
+
+       });
+
+
+
+
+
+
+
 
 Route::group(['prefix' => 'admin',  'middleware' => ['can:admin']], function()
 {
@@ -227,21 +248,23 @@ Route::get('admin-add-new-user', [AdminController::class, 'admin_add_new_user'])
 
 
 
+Route::post('admin-user-save', [AdminController::class, 'admin_user_save'])->name('admin-user-save');
 
 
 
+Route::get('admin-user-edit/{id}', [AdminController::class, 'admin_user_edit'])->name('admin-user-edit');
 
 
 
+Route::post('admin-user-update', [AdminController::class, 'admin_user_update'])->name('admin-user-update');
 
 
 
+Route::get('admin-user-delete/{id}', [AdminController::class, 'admin_user_delete'])->name('admin-user-delete');
 
 
 
-
-
-   
+Route::get('publish-request-list', [PublishRequestController::class, 'publish_request_list'])->name('publish-request-list');
 
 
 

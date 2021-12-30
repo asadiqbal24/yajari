@@ -43,7 +43,7 @@ class AuthController extends Controller
 
      
 
-   
+       
         if(Auth::user()->hasAccess(['admin'])){
           alert()->success('Welcome To Admin Dashboard');
           return redirect()->route('admin-home')->with('success','WELCOME'.Auth::user()->username.'...');
@@ -53,7 +53,6 @@ class AuthController extends Controller
          elseif(Auth::user()->hasAccess(['user'])){
 
                    alert()->success('Welcome To user Home');
-                 // dd('owner');
                   return redirect()->route('home')->with('success','WELCOME '.Auth::user()->username.'...'); 
                 
                 }
