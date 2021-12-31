@@ -9,4 +9,14 @@ class PublishRequest extends Model
 {
     use HasFactory;
     protected $table='publish_request';
+
+
+    public function user()
+    {
+        return $this->hasOne('App\Models\User','id','auth_id');
+    }
+    public function category_rel()
+    {
+       return $this->hasOne('App\Models\Category','id','category');
+    }
 }

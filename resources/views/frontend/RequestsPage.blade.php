@@ -19,6 +19,10 @@
             .Realize-text1 {
             margin-left: 3.5rem;
             }
+
+            .requestFaceImg1{
+                width: 70px;
+            }
             .Contact-b1{
             display: block;
             height: 30px;
@@ -879,16 +883,19 @@
                                 </div>
                                 <div class="col-lg-7 sidebartop">
                                     <div class="col-xxl-7 col-xl-12" style="width:100%;" id="CategoriesColShow">
+
+                                        @foreach($request as $r)
                                         <div class="col pb-5 leftsidebar">
                                             <div class="py-3 cardheight cardleft" style="background-color: white; border-radius: 10px;box-shadow: 10px 10px 100px 1px #ffe8ef; padding-left: 10px; margin: auto;">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <p class="responses-date1 text-start pt-2">7-Dec-2021</p>
+                                                        <p class="responses-date1 text-start pt-2">{{ date('d M Y - H:i:s', $r->created_at->timestamp) }}
+</p>
                                                     </div>
                                                     <div class="col pt-2 text-end" style="padding-right: 30px;">
                                                         <a href="" role="button"><img class="responses-heart1" src="{{asset('theme/icons/ic_favorite_border_24px.png')}}"></a>
                                                         <button type="button" class="responses-buttonQ1">
-                                                        <p class="responses-tQ1">$5</p>
+                                                        <p class="responses-tQ1">${{$r->price}}</p>
                                                         </button>
                                                     </div>
                                                 </div>
@@ -896,14 +903,14 @@
                                                     <div class="" style="padding-right: 20px;">
                                                         <div class="d-flex">
                                                             <div class="" style="margin: auto;">
-                                                                <a href="{{route('professionalProfile')}}"> <img class="requestFaceImg1" src="{{asset('theme/icons/asset-1.png')}}"></a>
+                                                                <a href="{{route('professionalProfile')}}"> <img class="requestFaceImg1" src="{{$r->file}}"></a>
                                                                 <img src="{{asset('theme/icons/redtickarrow.png')}}" class="tickredarrow">
                                                             </div>
                                                             <div class="text-start">
                                                                 <div class="row">
                                                                     <a href="{{route('professionalProfile')}}" style="text-decoration:none">
                                                                         <p class="Responses-Name1 text-start" style="margin-bottom: 0.5rem; text-decoration:none; color:black;">
-                                                                        Johny David</p>
+                                                                        {{isset($r->user)?$r->user->name:''}}</p>
                                                                     </a>
                                                                 </div>
                                                                 <div class="row">
@@ -916,11 +923,13 @@
                                                     </div>
                                                     <div class="" style="padding-left: 10px;">
                                                         <a href="{{route('view-detail')}}" style="text-decoration:none;color: black;">
-                                                            <p id="request-textID1" style="display: inline;"> <b>Looking for a move</b> </p>
+                                                            <p id="request-textID1" style="display: inline;"> <b>{{$r->request_title}}</b> </p>
+                                                            @if($r->urgent=='Urgent')
                                                             <p style="display: inline;font-size: 14px;color: #F9326D;margin-left: 10px;">Urgent</p>
+                                                            @endif
                                                         </a>
                                                         <p id="request-textID2" class="text-start pt-1">
-                                                        Seeking hedge and shrub trimming</p>
+                                                        {{$r->description}}</p>
                                                     </div>
                                                 </div>
                                                 <div id="responsesID1" class="col-12 responsecard" style="padding-left: 10px;">
@@ -931,11 +940,11 @@
                                                 <div class="row pt-3 cardfotter" style="padding-left: 10px;">
                                                     <div class="col-md-2 col-sm-4 col-6 d-flex paddingmobile">
                                                         <img src="{{asset('theme/icons/ic_place_-2.png')}}" class="lebardoicon" style="width: 15px;height: 22px;">
-                                                        <p class="responses-buttons1234 text-start lebardotext">Le Bardo</p>
+                                                        <p class="responses-buttons1234 text-start lebardotext">{{$r->position}}</p>
                                                     </div>
                                                     <div id="responsesID2" class="col-md-2 col-sm-4 col-12 pt-1">
                                                         <img src="{{asset('theme/icons/ic_label_24px.png')}}" style="width: 22px;height: 17px;padding-top: 2px;" class="categoryicon1920">
-                                                        <p class="responses-buttons1234 text-start categories">Categories</p>
+                                                        <p class="responses-buttons1234 text-start categories">{{isset($r->category_rel)?$r->category_rel->name:''}}</p>
                                                     </div>
                                                     <div class="col-md-2 col-sm-4 col-6 d-flex " style="padding-top: 4px;
                                                         padding-left: 30px;">
@@ -969,186 +978,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col pb-5 leftsidebar">
-                                            <div class="py-3 cardheight cardleft" style="background-color: white; border-radius: 10px;box-shadow: 10px 10px 100px 1px #ffe8ef; padding-left: 10px; margin: auto;">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <p class="responses-date1 text-start pt-2">7-Dec-2021</p>
-                                                    </div>
-                                                    <div class="col pt-2 text-end" style="padding-right: 30px;">
-                                                        <a href="" role="button"><img class="responses-heart1" src="{{asset('theme/icons/ic_favorite_border_24px.png')}}"></a>
-                                                        <button type="button" class="responses-buttonQ1">
-                                                        <p class="responses-tQ1">$5</p>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap">
-                                                    <div class="" style="padding-right: 20px;">
-                                                        <div class="d-flex">
-                                                            <div class="" style="margin: auto;">
-                                                                <a href="{{route('professionalProfile')}}"> <img class="requestFaceImg1" src="{{asset('theme/icons/asset-1.png')}}"></a>
-                                                                <img src="{{asset('theme/icons/redtickarrow.png')}}" class="tickredarrow">
-                                                            </div>
-                                                            <div class="text-start">
-                                                                <div class="row">
-                                                                    <a href="{{route('professionalProfile')}}" style="text-decoration:none">
-                                                                        <p class="Responses-Name1 text-start" style="margin-bottom: 0.5rem; text-decoration:none; color:black;">
-                                                                        Johny David</p>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col d-flex">
-                                                                        <img class="responses-star1" src="{{asset('theme/icons/Group 2411.png')}}">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="" style="padding-left: 10px;">
-                                                        <a href="viewdetails.html" style="text-decoration:none;color: black;">
-                                                            <p id="request-textID1" style="display: inline;"> <b>Looking for a move</b> </p>
-                                                            
-                                                        </a>
-                                                        <p id="request-textID2" class="text-start pt-1">
-                                                        Seeking hedge and shrub trimming</p>
-                                                    </div>
-                                                </div>
-                                                <div id="responsesID1" class="col-12 responsecard" style="padding-left: 10px;">
-                                                    <img src="{{asset('theme/icons/ic_textsms_-1.png')}}" class="responseicon" style="width: 15px;height: 20px;padding-top: 5px;">
-                                                    <p class="responses-buttons1234 text-start responsetext">2 Responses</p>
-                                                </div>
-                                                <hr id="LineID1" class="hrclass" style="width: 92%;margin: auto;height: 2px;position: relative;left: -8px;">
-                                                <div class="row pt-3 cardfotter" style="padding-left: 10px;">
-                                                    <div class="col-md-2 col-sm-4 col-6 d-flex paddingmobile">
-                                                        <img src="{{asset('theme/icons/ic_place_-2.png')}}" class="lebardoicon" style="width: 15px;height: 22px;">
-                                                        <p class="responses-buttons1234 text-start lebardotext">Le Bardo</p>
-                                                    </div>
-                                                    <div id="responsesID2" class="col-md-2 col-sm-4 col-12 pt-1">
-                                                        <img src="{{asset('theme/icons/ic_label_24px.png')}}" style="width: 22px;height: 17px;padding-top: 2px;" class="categoryicon1920">
-                                                        <p class="responses-buttons1234 text-start categories">Categories</p>
-                                                    </div>
-                                                    <div class="col-md-2 col-sm-4 col-6 d-flex " style="padding-top: 4px;
-                                                        padding-left: 30px;">
-                                                        <img src="{{asset('theme/icons/Union 21.png')}}" class="arrow" style="width: 22px;
-                                                        height: 16px;
-                                                        padding-top: 4px;">
-                                                        <p class="responses-buttons1234 text-start distance">5.2Km</p>
-                                                    </div>
-                                                    <div id="responsesID2" class="col-md-3 col-sm-4 col-12 responseside">
-                                                        <img src="{{asset('theme/icons/ic_textsms_-1.png')}}" style="width: 15px;height: 20px;padding-top: 5px;">
-                                                        <p class="responses-buttons1234 text-start responsetop">2 Responses</p>
-                                                    </div>
-                                                    <div class="col-md-3 col-sm-12 col-12 pb-2">
-                                                        <div class="row">
-                                                            <div class="col pt-2 text-end cntctbtn-padding">
-                                                                <a href="" style="text-decoration:none;" class="Contact-b1" data-bs-toggle="modal" role="button" data-bs-target="#staticBackdrop" data-bs-dismiss="modal">Contact</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col" style="padding-right: 32px;">
-                                                            <div class="row ">
-                                                                <div class="">
-                                                                    <a class="nav-item2 nav-link mobile" data-bs-toggle="modal" role="button" data-bs-target="#mobilechat" data-bs-dismiss="modal">Contact</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3 col-sm-4 col-12 distanceshow">
-                                                        <img src="{{asset('theme/icons/ic_label_24px.png')}}" class="responsedownarrow">
-                                                        <p class="responses-buttons1234 text-start categoriesside">Categories</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col pb-5 leftsidebar">
-                                            <div class="py-3 cardheight cardleft" style="background-color: white; border-radius: 10px;box-shadow: 10px 10px 100px 1px #ffe8ef; padding-left: 10px; margin: auto;">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <p class="responses-date1 text-start pt-2">7-Dec-2021</p>
-                                                    </div>
-                                                    <div class="col pt-2 text-end" style="padding-right: 30px;">
-                                                        <a href="" role="button"><img class="responses-heart1" src="{{asset('theme/icons/ic_favorite_border_24px.png')}}"></a>
-                                                        <button type="button" class="responses-buttonQ1">
-                                                        <p class="responses-tQ1">$5</p>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap">
-                                                    <div class="" style="padding-right: 20px;">
-                                                        <div class="d-flex">
-                                                            <div class="" style="margin: auto;">
-                                                                <a href="{{route('professionalProfile')}}"> <img class="requestFaceImg1" src="{{asset('theme/icons/asset-1.png')}}"></a>
-                                                                <img src="{{asset('theme/icons/redtickarrow.png')}}" class="tickredarrow">
-                                                            </div>
-                                                            <div class="text-start">
-                                                                <div class="row">
-                                                                    <a href="{{route('professionalProfile')}}" style="text-decoration:none">
-                                                                        <p class="Responses-Name1 text-start" style="margin-bottom: 0.5rem; text-decoration:none; color:black;">
-                                                                        Johny David</p>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col d-flex">
-                                                                        <img class="responses-star1" src="{{asset('theme/icons/Group 2411.png')}}">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="" style="padding-left: 10px;">
-                                                        <a href="viewdetails.html" style="text-decoration:none;color: black;">
-                                                            <p id="request-textID1" style="display: inline;"> <b>Looking for a move</b> </p>
-                                                            
-                                                        </a>
-                                                        <p id="request-textID2" class="text-start pt-1">
-                                                        Seeking hedge and shrub trimming</p>
-                                                    </div>
-                                                </div>
-                                                <div id="responsesID1" class="col-12 responsecard" style="padding-left: 10px;">
-                                                    <img src="{{asset('theme/icons/ic_textsms_-1.png')}}" class="responseicon" style="width: 15px;height: 20px;padding-top: 5px;">
-                                                    <p class="responses-buttons1234 text-start responsetext">2 Responses</p>
-                                                </div>
-                                                <hr id="LineID1" class="hrclass" style="width: 92%;margin: auto;height: 2px;position: relative;left: -8px;">
-                                                <div class="row pt-3 cardfotter" style="padding-left: 10px;">
-                                                    <div class="col-md-2 col-sm-4 col-6 d-flex paddingmobile">
-                                                        <img src="{{asset('theme/icons/ic_place_-2.png')}}" class="lebardoicon" style="width: 15px;height: 22px;">
-                                                        <p class="responses-buttons1234 text-start lebardotext">Le Bardo</p>
-                                                    </div>
-                                                    <div id="responsesID2" class="col-md-2 col-sm-4 col-12 pt-1">
-                                                        <img src="{{asset('theme/icons/ic_label_24px.png')}}" style="width: 22px;height: 17px;padding-top: 2px;" class="categoryicon1920">
-                                                        <p class="responses-buttons1234 text-start categories">Categories</p>
-                                                    </div>
-                                                    <div class="col-md-2 col-sm-4 col-6 d-flex " style="padding-top: 4px;
-                                                        padding-left: 30px;">
-                                                        <img src="{{asset('theme/icons/Union 21.png')}}" class="arrow" style="width: 22px;
-                                                        height: 16px;
-                                                        padding-top: 4px;">
-                                                        <p class="responses-buttons1234 text-start distance">5.2Km</p>
-                                                    </div>
-                                                    <div id="responsesID2" class="col-md-3 col-sm-4 col-12 responseside">
-                                                        <img src="{{asset('theme/icons/ic_textsms_-1.png')}}" style="width: 15px;height: 20px;padding-top: 5px;">
-                                                        <p class="responses-buttons1234 text-start responsetop">2 Responses</p>
-                                                    </div>
-                                                    <div class="col-md-3 col-sm-12 col-12 pb-2">
-                                                        <div class="row">
-                                                            <div class="col pt-2 text-end cntctbtn-padding">
-                                                                <a href="" style="text-decoration:none;" class="Contact-b1" data-bs-toggle="modal" role="button" data-bs-target="#staticBackdrop" data-bs-dismiss="modal">Contact</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col" style="padding-right: 32px;">
-                                                            <div class="row ">
-                                                                <div class="">
-                                                                    <a class="nav-item2 nav-link mobile" data-bs-toggle="modal" role="button" data-bs-target="#mobilechat" data-bs-dismiss="modal">Contact</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3 col-sm-4 col-12 distanceshow">
-                                                        <img src="{{asset('theme/icons/ic_label_24px.png')}}" class="responsedownarrow">
-                                                        <p class="responses-buttons1234 text-start categoriesside">Categories</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        @endforeach()
+                                        
+                                        
                                         <!--Realize Your Project-->
                                         <div class="row py-4 bottomslider slider320">
                                             <p class="Realize-text1" style="font-weight: bold;margin-bottom: 1px;">Realize Your Projects!
@@ -1367,196 +1199,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col pb-5 bottomsidebar">
-                                            <div class="py-3 cardheight cardleft" style="background-color: white; border-radius: 10px;box-shadow: 10px 10px 100px 1px #ffe8ef; padding-left: 10px; margin: auto;">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <p class="responses-date1 text-start pt-2">7-Dec-2021</p>
-                                                    </div>
-                                                    <div class="col pt-2 text-end" style="padding-right: 30px;">
-                                                        <a href="" role="button"><img class="responses-heart1" src="{{asset('theme/icons/ic_favorite_border_24px.png')}}"></a>
-                                                        <button type="button" class="responses-buttonQ1">
-                                                        <p class="responses-tQ1">$5</p>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap">
-                                                    <div class="" style="padding-right: 20px;">
-                                                        <div class="d-flex">
-                                                            <div class="" style="margin: auto;">
-                                                                <a href="{{route('professionalProfile')}}"> <img class="requestFaceImg1" src="{{asset('theme/icons/asset-1.png')}}"></a>
-                                                                <img src="{{asset('theme/icons/redtickarrow.png')}}" class="tickredarrow">
-                                                            </div>
-                                                            <div class="text-start">
-                                                                <div class="row">
-                                                                    <a href="{{route('professionalProfile')}}" style="text-decoration:none">
-                                                                        <p class="Responses-Name1 text-start" style="margin-bottom: 0.5rem; text-decoration:none; color:black;">
-                                                                        Johny David</p>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col d-flex">
-                                                                        <img class="responses-star1" src="{{asset('theme/icons/Group 2411.png')}}">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="" style="padding-left: 10px;">
-                                                        <a href="viewdetails.html" style="text-decoration:none;color: black;">
-                                                            <p id="request-textID1" style="display: inline;"> <b>Looking for a move</b> </p>
-                                                            
-                                                        </a>
-                                                        <p id="request-textID2" class="text-start pt-1">Seeking hedge
-                                                        and shrub trimming</p>
-                                                    </div>
-                                                </div>
-                                                <div id="responsesID1" class="col-12 responsecard" style="padding-left: 10px;">
-                                                    <img src="{{asset('theme/icons/ic_textsms_-1.png')}}" class="responseicon" style="width: 15px;height: 20px;padding-top: 5px;">
-                                                    <p class="responses-buttons1234 text-start responsetext">2 Responses</p>
-                                                </div>
-                                                <hr id="LineID1" class="hrclass" style="width: 92%;
-                                                margin: auto;
-                                                height: 2px;
-                                                position: relative;
-                                                left: -8px;
-                                                ">
-                                                <div class="row pt-3 cardfotter" style="padding-left: 10px;">
-                                                    <div class="col-md-2 col-sm-4 col-6 d-flex paddingmobile">
-                                                        <img src="{{asset('theme/icons/ic_place_-2.png')}}" class="lebardoicon" style="width: 15px;height: 22px;">
-                                                        <p class="responses-buttons1234 text-start lebardotext">Le Bardo</p>
-                                                    </div>
-                                                    <div id="responsesID2" class="col-md-2 col-sm-4 col-12 pt-1">
-                                                        <img src="{{asset('theme/icons/ic_label_24px.png')}}" style="width: 22px;height: 17px;padding-top: 2px;" class="categoryicon1920">
-                                                        <p class="responses-buttons1234 text-start categories">Categories</p>
-                                                    </div>
-                                                    <div class="col-md-2 col-sm-4 col-6 d-flex " style="padding-top: 4px;
-                                                        padding-left: 30px;">
-                                                        <img src="{{asset('theme/icons/Union 21.png')}}" class="arrow" style="width: 22px;
-                                                        height: 16px;
-                                                        padding-top: 4px;">
-                                                        <p class="responses-buttons1234 text-start distance">5.2Km</p>
-                                                    </div>
-                                                    <div id="responsesID2" class="col-md-3 col-sm-4 col-12 responseside">
-                                                        <img src="{{asset('theme/icons/ic_textsms_-1.png')}}" style="width: 15px;height: 20px;padding-top: 5px;">
-                                                        <p class="responses-buttons1234 text-start responsetop">2 Responses</p>
-                                                    </div>
-                                                    <div class="col-md-3 col-sm-12 col-12 pb-2">
-                                                        <div class="row">
-                                                            <div class="col pt-2 text-end cntctbtn-padding">
-                                                                <a href="" style="text-decoration:none;" class="Contact-b1" data-bs-toggle="modal" role="button" data-bs-target="#staticBackdrop" data-bs-dismiss="modal">Contact</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col" style="padding-right: 32px;">
-                                                            <div class="row ">
-                                                                <div class="">
-                                                                    <a class="nav-item2 nav-link mobile" data-bs-toggle="modal" role="button" data-bs-target="#mobilechat" data-bs-dismiss="modal">Contact</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3 col-sm-4 col-12 distanceshow">
-                                                        <img src="{{asset('theme/icons/ic_label_24px.png')}}" class="responsedownarrow">
-                                                        <p class="responses-buttons1234 text-start categoriesside">Categories</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col pb-5 bottomsidebar">
-                                            <div class="py-3 cardheight cardleft" style="background-color: white; border-radius: 10px;box-shadow: 10px 10px 100px 1px #ffe8ef; padding-left: 10px; margin: auto;">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <p class="responses-date1 text-start pt-2">7-Dec-2021</p>
-                                                    </div>
-                                                    <div class="col pt-2 text-end" style="padding-right: 30px;">
-                                                        <a href="" role="button"><img class="responses-heart1" src="{{asset('theme/icons/ic_favorite_border_24px.png')}}"></a>
-                                                        <button type="button" class="responses-buttonQ1">
-                                                        <p class="responses-tQ1">$5</p>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-wrap">
-                                                    <div class="" style="padding-right: 20px;">
-                                                        <div class="d-flex">
-                                                            <div class="" style="margin: auto;">
-                                                                <a href="{{route('professionalProfile')}}"> <img class="requestFaceImg1" src="{{asset('theme/icons/asset-1.png')}}"></a>
-                                                                <img src="{{asset('theme/icons/redtickarrow.png')}}" class="tickredarrow">
-                                                            </div>
-                                                            <div class="text-start">
-                                                                <div class="row">
-                                                                    <a href="{{route('professionalProfile')}}" style="text-decoration:none">
-                                                                        <p class="Responses-Name1 text-start" style="margin-bottom: 0.5rem; text-decoration:none; color:black;">
-                                                                        Johny David</p>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col d-flex">
-                                                                        <img class="responses-star1" src="{{asset('theme/icons/Group 2411.png')}}">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="" style="padding-left: 10px;">
-                                                        <a href="viewdetails.html" style="text-decoration:none;color: black;">
-                                                            <p id="request-textID1" style="display: inline;"> <b>Looking for a move</b> </p>
-                                                            
-                                                        </a>
-                                                        <p id="request-textID2" class="text-start pt-1">Seeking hedge
-                                                        and shrub trimming</p>
-                                                    </div>
-                                                </div>
-                                                <div id="responsesID1" class="col-12 responsecard" style="padding-left: 10px;">
-                                                    <img src="{{asset('theme/icons/ic_textsms_-1.png')}}" class="responseicon" style="width: 15px;height: 20px;padding-top: 5px;">
-                                                    <p class="responses-buttons1234 text-start responsetext">2 Responses</p>
-                                                </div>
-                                                <hr id="LineID1" class="hrclass" style="width: 92%;
-                                                margin: auto;
-                                                height: 2px;
-                                                position: relative;
-                                                left: -8px;
-                                                ">
-                                                <div class="row pt-3 cardfotter" style="padding-left: 10px;">
-                                                    <div class="col-md-2 col-sm-4 col-6 d-flex paddingmobile">
-                                                        <img src="{{asset('theme/icons/ic_place_-2.png')}}" class="lebardoicon" style="width: 15px;height: 22px;">
-                                                        <p class="responses-buttons1234 text-start lebardotext">Le Bardo</p>
-                                                    </div>
-                                                    <div id="responsesID2" class="col-md-2 col-sm-4 col-12 pt-1">
-                                                        <img src="{{asset('theme/icons/ic_label_24px.png')}}" style="width: 22px;height: 17px;padding-top: 2px;" class="categoryicon1920">
-                                                        <p class="responses-buttons1234 text-start categories">Categories</p>
-                                                    </div>
-                                                    <div class="col-md-2 col-sm-4 col-6 d-flex " style="padding-top: 4px;
-                                                        padding-left: 30px;">
-                                                        <img src="{{asset('theme/icons/Union 21.png')}}" class="arrow" style="width: 22px;
-                                                        height: 16px;
-                                                        padding-top: 4px;">
-                                                        <p class="responses-buttons1234 text-start distance">5.2Km</p>
-                                                    </div>
-                                                    <div id="responsesID2" class="col-md-3 col-sm-4 col-12 responseside">
-                                                        <img src="{{asset('theme/icons/ic_textsms_-1.png')}}" style="width: 15px;height: 20px;padding-top: 5px;">
-                                                        <p class="responses-buttons1234 text-start responsetop">2 Responses</p>
-                                                    </div>
-                                                    <div class="col-md-3 col-sm-12 col-12 pb-2">
-                                                        <div class="row">
-                                                            <div class="col pt-2 text-end cntctbtn-padding">
-                                                                <a href="" style="text-decoration:none;" class="Contact-b1" data-bs-toggle="modal" role="button" data-bs-target="#staticBackdrop" data-bs-dismiss="modal">Contact</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col" style="padding-right: 32px;">
-                                                            <div class="row ">
-                                                                <div class="">
-                                                                    <a class="nav-item2 nav-link mobile" data-bs-toggle="modal" role="button" data-bs-target="#mobilechat" data-bs-dismiss="modal">Contact</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3 col-sm-4 col-12 distanceshow">
-                                                        <img src="{{asset('theme/icons/ic_label_24px.png')}}" class="responsedownarrow">
-                                                        <p class="responses-buttons1234 text-start categoriesside">Categories</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
+                                        
                                         <!--Publish Request-->
                                         <section class="pb-5 text-center lastpic">
                                             <div class="text-light ">

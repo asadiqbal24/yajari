@@ -4,9 +4,6 @@ body {
 }
 
 
-.background-image{
-    height: 190px;
-}
 .requestnav {
     padding-left: 25px;
     text-decoration: none;
@@ -115,7 +112,7 @@ body {
 
 .CRperticularT {
     text-align: center;
-    width: 5rem;
+    width: 6rem;
     font-size: 14px;
     font-weight: bolder;
     border: 1px solid rgb(180, 178, 178);
