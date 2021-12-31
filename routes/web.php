@@ -33,9 +33,7 @@ Route::get('home', function () {
     return view('frontend.index');
 })->name('home');
 
-Route::get('requests', function () {
-    return view('frontend.RequestsPage');
-})->name('requests');
+
 
 Route::get('serviceprovider', function () {
     return view('frontend.ServiceProviders');
@@ -59,6 +57,9 @@ Route::get('professionalProfile', function () {
 
 
 // Auth::routes();
+
+
+Route::get('requests', [RequestController::class, 'requests'])->name('requests');
 
 
 Route::post('/userRegister', [UserController::class, 'userRegister'])->name('userRegister'); 
@@ -87,7 +88,7 @@ Route::post('confirm-publish-save', [RequestController::class, 'confirm_publish_
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('confirm-publish', [RequestController::class, 'confirm_publish'])->name('confirm-publish');
+Route::get('confirm-publish/{id}', [RequestController::class, 'confirm_publish'])->name('confirm-publish');
 
 
 
@@ -178,6 +179,10 @@ Route::group(['prefix' => 'user',  'middleware' => ['can:user']], function()
  Route::post('user-confirm-publish-save', [RequestController::class, 'user_confirm_publish_save'])->name('user-confirm-publish-save');
 
 
+ Route::post('user-confirm-published-save', [RequestController::class, 'user_confirm_published_save'])->name('user-confirm-published-save');
+
+
+
        });
 
 
@@ -265,6 +270,23 @@ Route::get('admin-user-delete/{id}', [AdminController::class, 'admin_user_delete
 
 
 Route::get('publish-request-list', [PublishRequestController::class, 'publish_request_list'])->name('publish-request-list');
+
+
+
+Route::get('admin-request-approve/{id}', [PublishRequestController::class, 'admin_request_approve'])->name('admin-request-approve');
+
+
+Route::get('admin-request-disapprove/{id}', [PublishRequestController::class, 'admin_request_disapprove'])->name('admin-request-disapprove');
+
+
+
+Route::get('admin-publish-request-delete/{id}', [PublishRequestController::class, 'admin_publish_request_delete'])->name('admin-publish-request-delete');
+
+
+
+
+
+
 
 
 

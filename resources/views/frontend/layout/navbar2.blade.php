@@ -202,7 +202,7 @@
                                         </div>
                                     </div>
                                     <div class="chatDIV2 messageside">
-                                        <a href="MobileActiveChat.html">
+                                        <a href="">
                                             <img src="{{asset('theme/icons/ic_textsms_24px.png')}}" style="margin-top: 0.6rem;">
                                         </a>
                                     </div>
