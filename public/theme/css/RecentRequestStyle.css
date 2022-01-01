@@ -493,8 +493,9 @@ body {
     }
 
     .requestFaceImg1 {
-        width: 85px;
+        width: 80px;
         padding-left: 10px;
+        height: 80px;
     }
 
     .requestFaceImgTICK {
