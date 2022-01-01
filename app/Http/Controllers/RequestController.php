@@ -98,7 +98,9 @@ class RequestController extends Controller
 
     public function my_request()
     {
-     return view('frontend.MyRequests');   
+        $myrequest=PublishRequest::where('auth_id',Auth::user()->id)->with('user','category_rel')->get();
+        //dd($myrequest);
+     return view('frontend.MyRequests',compact('myrequest'));   
     }
 
     public function myfavourites_neighbor()
@@ -157,14 +159,18 @@ class RequestController extends Controller
         return view('frontend.ChangePassword');
     }
 
-    public function view_detail()
+    public function view_detail($id)
     {
-     return view('frontend.viewdetails');   
+     $detail=PublishRequest::where('id',$id)->with('user')->first();
+     //dd($detail);   
+     return view('frontend.viewdetails',compact('detail'));   
     }
 
     public function requests()
     {
-        $request=PublishRequest::where('status',1)->with('user','category_rel')->get();
+        $request=PublishRequest::where('status',1)->with('user','category_rel')->orderBy('id','DESC')->get();
+
+
        return view('frontend.RequestsPage',compact('request'));
     }
 }

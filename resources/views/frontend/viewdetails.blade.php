@@ -67,22 +67,249 @@
         color: white;
         }
         }
-        @media all and (min-width: 1440px) {
-
-         .CRButton2 {
-    text-align: center;
-    width: 7rem;
-    height: 2.2rem;
-    background: linear-gradient(to right, #ff6d99, #fd0d55);
-    border-radius: 6px;
-    position: relative;
-    left: -3px;
-}
+        @media all and (min-width: 1300px) {
+        .navalign {
+        /*        padding-left: 240px;*/
+        margin-left: 6%;
+        padding-top: 10px;
+        color: #ff6e9a;
+        font-weight: bold;
+        display: inline-flex;
+        padding-right: .5rem;
         }
-
-
-
-
+        .CRButton2 {
+        text-align: center;
+        width: 7rem;
+        height: 2.2rem;
+        background: linear-gradient(to right, #ff6d99, #fd0d55);
+        border-radius: 6px;
+        position: relative;
+        left: 61px;
+        }
+        .uploadPicture {
+        width: 8rem;
+        height: 8rem;
+        border-style: dashed;
+        border-color: rgb(175, 175, 175);
+        position: relative;
+        top: -16px;
+        }
+        .upload-PictureIMG {
+        position: relative;
+        top: 10px;
+        }
+        .buttonfile {
+        opacity: 0;
+        position: relative;
+        top: -15px;
+        width: 100%;
+        }
+        .reportcard {
+        position: relative;
+        left: 276px;
+        }
+        .contactincard {
+        position: relative;
+        left: 278px;
+        }
+        .col1 {
+        position: relative;
+        left: 100px;
+        }
+        .col2 {
+        position: relative;
+        left: 25px;
+        }
+        .topsiderbarbutton {
+        background-color: white;
+        color: black;
+        width: 115%;
+        text-align: left;
+        border: 1px solid #a6a4a4;
+        position: relative;
+        left: -44px;
+        border-radius: 15px;
+        }
+        .btn-primary:hover {
+        color: #060606;
+        background-color: white;
+        border-color: black;
+        }
+        .btn-check:active + .btn-primary,
+        .btn-check:checked + .btn-primary,
+        .btn-primary.active,
+        .btn-primary:active,
+        .show > .btn-primary.dropdown-toggle {
+        color: #060606;
+        background-color: white;
+        border-color: black;
+        }
+        .bottomslider {
+        width: 85%;
+        margin: auto;
+        box-shadow: 0 0 10px 0 rgb(207, 207, 207);
+        border-radius: 10px;
+        }
+        .bottomslider2 {
+        width: 100%;
+        margin: auto;
+        box-shadow: 0 0 10px 0 rgb(207, 207, 207);
+        border-radius: 10px;
+        position: relative;
+        left: 30px;
+        }
+        .searchbar {
+        margin: auto;
+        position: relative;
+        width: 75%
+        }
+        .sidebar1 {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 10px 10px 100px 1px #ffe8ef;
+        padding-left: 10px;
+        margin: auto;
+        position: relative;
+        left: 40px;
+        top: -22px;
+        border: 1px solid;
+        border-color: #64e2f5;
+        }
+        .searchbardown {
+        position: relative;
+        top: -20px;
+        }
+        .sidebarcard2 {
+        position: relative;
+        top: 70px;
+        left: 35px;
+        }
+        .leftsidebar {
+        width: 80%;
+        margin: auto;
+        position: relative;
+        bottom: 20px;
+        left: 30px;
+        }
+        .bottomsidebar {
+        width: 75%;
+        margin: auto;
+        position: relative;
+        top: 30px;
+        }
+        /*
+        .ahre {
+        padding-left: 2rem;
+        }
+        */
+        /*
+        .mainpicture {
+        padding-left: 100px;
+        }
+        */
+        .down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        }
+        .navalign2 {
+        /*        padding-left: 200px;*/
+        padding-top: 10px;
+        color: #ff6e9a;
+        font-weight: bold;
+        display: inline-flex;
+        margin-left: auto;
+        }
+        .nav-publish {
+        padding-left: 20px;
+        background: linear-gradient(to right, #ffacbf, #fa4d75);
+        color: white;
+        border-radius: 20px;
+        align-items: center;
+        padding-top: 10px;
+        }
+        .search {
+        padding-right: 5rem;
+        }
+        .smallbutton {
+        position: relative;
+        left: -80px;
+        }
+        
+        .fontdummy {
+        font-size: 12px;
+        text-align: justify;
+        }
+        .confirmpublish {
+        position: relative;
+        left: -35px;
+        }
+        .lebardolocation {
+        position: relative;
+        left: -35px;
+        }
+        .star {
+        position: relative;
+        left: -35px;
+        }
+        .urgent {
+        text-align: center;
+        width: 5rem;
+        font-size: 14px;
+        font-weight: bolder;
+        border: 1px solid rgb(180, 178, 178);
+        border-radius: 3px;
+        margin-bottom: 0.8rem;
+        margin-left: 1rem;
+        }
+        .CRButton3 {
+        text-align: center;
+        width: 5rem;
+        font-size: 14px;
+        font-weight: bolder;
+        margin-bottom: 0.8rem;
+        margin-left: 1rem;
+        height: 1.2rem;
+        background-color: white;
+        position: relative;
+        left: -388px;
+        top: 96px;
+        }
+        .CRButton1 {
+        text-align: center;
+        width: 8rem;
+        height: 2.5rem;
+        background-color: white;
+        border: 2px solid #fd6794;
+        border-radius: 6px;
+        }
+        .CRButton1 p {
+        padding-top: 0.5rem;
+        }
+        .CRButton2 {
+        text-align: center;
+        width: 8rem;
+        height: 2.5rem;
+        color: white;
+        background: linear-gradient(to right, #ff6d99, #fd0d55);
+        border-radius: 6px;
+        position: relative;
+        left: 12px;
+        }
+        .CRButton2 p {
+        padding-top: 0.5rem;
+        }
+        }
+        @media all and (min-width: 1440px) {
+        .CRButton2 {
+        text-align: center;
+        width: 7rem;
+        height: 2.2rem;
+        background: linear-gradient(to right, #ff6d99, #fd0d55);
+        border-radius: 6px;
+        position: relative;
+        left: -3px;
+        }
+        }
         @media all and (min-width: 1590px) {
         .navalign {
         padding-left: 173px;
@@ -221,7 +448,7 @@
         <section class="pt-3 text-center">
             <div class="row" style="margin:0px">
                 <div class="col-lg-12 mainpicture">
-                    <div class="background-image text-center backgroundimage" style="background-image: url(theme/pictures/Group\ 12.png);">
+                    <div class="background-image text-center backgroundimage" style="background-image: url(../theme/pictures/Group\ 12.png);">
                         <p class="showcase-text1" style="color:white">View your requests</p>
                     </div>
                 </div>
@@ -234,32 +461,34 @@
                     <div class="col-lg-8 col-md-12" style="margin: auto;">
                         <div class="" style=" margin: auto;">
                             <div class="row">
-                                <p class="responses-date1 text-start">7-Dec-2021</p>
+                                <p class="responses-date1 text-start">{{ date('d M Y - H:i:s', $detail->created_at->timestamp) }}</p>
                             </div>
                             <div class="row">
                                 <div class="col-3 col-sm-4 col-md-4 col-lg-4 col-xxl-3">
-                                    <img class="requestFaceImg1" src="{{asset('theme/icons/asset-1.png')}}">
+                                    <img class="requestFaceImg1" src="{{$detail->file}}" style="    border-radius: 10px;">
                                 </div>
                                 <div class="col-9 col-sm-8 col-md-8 col-lg-8 col-xxl-9 text-start ConformRequestCol2">
                                     <div class="d-flex" style="justify-content: space-between;">
                                         <div class="d-flex flex-wrap confirmpublish">
                                             <p class="Responses-Name1 text-start">
-                                            Johny David</p>
-                                            <p class="CRperticularT">Perticular</p>
+                                            {{isset($detail->user)?$detail->user->name:''}}</p>
+                                            @if($detail->user->registration_type==1)<p class="CRperticularT">Professional</p> @elseif($detail->user->registration_type==2) <p class="CRperticularT">Private</p>@endif
                                         </div>
                                         <div class="d-flex flex-wrap">
-                                            <span class="QuotationButton">$5</span>
-                                            <!-- <p class="responses-tQ2"></p> -->
+                                            <span class="QuotationButton">${{$detail->price}}</span>
+                                          
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col d-flex" style="justify-content: space-between;">
                                             <div class="d-flex lebardolocation">
                                                 <img src="{{asset('theme/icons/ic_place_-2.png')}}" style="width: 12px;height: 17px;">
-                                                <p class="Position-t1 text-start">Le Bardo Location</p>
+                                                <p class="Position-t1 text-start">{{$detail->position}}</p>
                                             </div>
                                             <div>
+                                                @if($detail->urgent=='Urgent')
                                                 <p style="display: inline;font-size: 14px;color: #F9326D;margin-left: 10px;" class="CRButton3">Urgent</p>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -271,17 +500,13 @@
                                 </div>
                             </div>
                             <div class="row py-2 lookingformove">
-                                <p id="request-textID1">Looking for a move</p>
-                                <p class="text-start pt-1 fontdummy">In publishing and graphic design,
-                                    Lorem ipsum is a placeholder text commonly used to demonstrate the visual
-                                form of a document.</p>
+                                <p id="request-textID1">{{$detail->request_title}}</p>
+                                <p class="pt-1 fontdummy">{{$detail->description}}.</p>
                             </div>
                             <div class="row photogallerymove">
                                 <p class="CRPhotosT">Photos:</p>
                                 <div class="col">
-                                    <img class="CRPhotosImg" src="{{asset('theme/pictures/boris-debusscher-1.png')}}">
-                                    <img class="CRPhotosImg" src="{{asset('theme/pictures/cdc-T-1.png')}}">
-                                    <img class="CRPhotosImg" src="{{asset('theme/pictures/cdc-wz-1.png')}}">
+                                    <img class="CRPhotosImg" src="{{$detail->file}}">
                                     <button class="uploadPicture"> <img class="upload-PictureIMG" src="{{asset('theme/icons/ic_add_a_photo_24px.png')}}">
                                     <input type="file" class="buttonfile" name="upload_fle"></button>
                                 </div>

@@ -157,7 +157,7 @@ Route::get('change-language', [RequestController::class, 'change_language'])->na
 
 
 
-Route::get('view-detail', [RequestController::class, 'view_detail'])->name('view-detail');
+Route::get('view-detail/{id}', [RequestController::class, 'view_detail'])->name('view-detail');
 
 
 
